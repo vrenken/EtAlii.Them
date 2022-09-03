@@ -1,6 +1,6 @@
 namespace Game.Buildings
 {
-    public class Floor : Building
+    public class Ground : Building
     {
         
     }

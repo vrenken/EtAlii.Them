@@ -1,7 +1,10 @@
 {
-    "name": "Game",
-    "rootNamespace": "Game",
-    "references": [],
+    "name": "Game.World",
+    "rootNamespace": "Game.World",
+    "references": [
+        "Game.Buildings",
+        "Game.Units"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

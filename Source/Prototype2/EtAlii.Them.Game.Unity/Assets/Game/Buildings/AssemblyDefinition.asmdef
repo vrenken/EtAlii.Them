@@ -1,9 +1,7 @@
 {
-    "name": "Game.Tests",
-    "rootNamespace": "Game.Tests",
-    "references": [
-        "Game"
-    ],
+    "name": "Game.Buildings",
+    "rootNamespace": "Game.Buildings",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
