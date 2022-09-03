@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Backend", "EtAl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Backend.Tests", "EtAlii.Them.Backend.Tests\EtAlii.Them.Backend.Tests.csproj", "{417B317A-3CF5-4800-A9B1-3C5D262F69A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Game.Desktop", "EtAlii.Them.Game.Desktop\EtAlii.Them.Game.Desktop.csproj", "{99D90F09-9EE5-4427-A4A1-24307477967F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Game.MonoGame.Desktop", "EtAlii.Them.Game.MonoGame.Desktop\EtAlii.Them.Game.MonoGame.Desktop.csproj", "{99D90F09-9EE5-4427-A4A1-24307477967F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
