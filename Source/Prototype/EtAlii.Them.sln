@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Backend", "EtAlii.Them.Backend\EtAlii.Them.Backend.csproj", "{3EF9BCB6-D64D-4B9C-8601-AD3D8CA8BCE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Backend.Tests", "EtAlii.Them.Backend.Tests\EtAlii.Them.Backend.Tests.csproj", "{417B317A-3CF5-4800-A9B1-3C5D262F69A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtAlii.Them.Game.Desktop", "EtAlii.Them.Game.Desktop\EtAlii.Them.Game.Desktop.csproj", "{99D90F09-9EE5-4427-A4A1-24307477967F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EF9BCB6-D64D-4B9C-8601-AD3D8CA8BCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF9BCB6-D64D-4B9C-8601-AD3D8CA8BCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF9BCB6-D64D-4B9C-8601-AD3D8CA8BCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF9BCB6-D64D-4B9C-8601-AD3D8CA8BCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417B317A-3CF5-4800-A9B1-3C5D262F69A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417B317A-3CF5-4800-A9B1-3C5D262F69A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417B317A-3CF5-4800-A9B1-3C5D262F69A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417B317A-3CF5-4800-A9B1-3C5D262F69A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D90F09-9EE5-4427-A4A1-24307477967F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D90F09-9EE5-4427-A4A1-24307477967F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D90F09-9EE5-4427-A4A1-24307477967F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D90F09-9EE5-4427-A4A1-24307477967F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

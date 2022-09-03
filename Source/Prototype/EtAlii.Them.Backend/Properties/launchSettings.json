@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "EtAlii.Them.Backend": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5216;https://localhost:7059",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
