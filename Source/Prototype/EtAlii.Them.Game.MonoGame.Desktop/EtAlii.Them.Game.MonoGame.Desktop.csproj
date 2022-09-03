@@ -16,8 +16,7 @@
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
-<!--    <PackageReference Include="sdl2.nuget" Version="2.0.22" />-->
-<!--    <PackageReference Include="sdl2_ttf.nuget" Version="2.20.0" />-->
+    <PackageReference Include="SDL2.Bindings" Version="1.1.0" />
     <PackageReference Include="Svelto.Common" Version="3.3.2" />
     <PackageReference Include="Svelto.ECS" Version="3.3.2" />
   </ItemGroup>

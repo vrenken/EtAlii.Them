@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using SDL2;
+using SDL2.Bindings;
 using MiniExamples.DeterministicPhysicDemo.Graphics.Extensions;
 
 namespace MiniExamples.DeterministicPhysicDemo.Graphics
 {
     public class Sdl2Driver : IGraphics, IInput
     {
-        const int WindowWidth  = 1024;
-        const int WindowHeight = 768;
+        const int WindowWidth  = 1280;
+        const int WindowHeight = 1024;
 
         public void Cleanup()
         {
