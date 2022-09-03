@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using SDL2.Bindings;
-using MiniExamples.DeterministicPhysicDemo.Graphics.Extensions;
+using EtAlii.Them.Game.Graphics.Extensions;
 
-namespace MiniExamples.DeterministicPhysicDemo.Graphics
+namespace EtAlii.Them.Game.Graphics
 {
+    using EtAlii.Them.Game.Graphics;
+
     public class Sdl2Driver : IGraphics, IInput
     {
         const int WindowWidth  = 1280;

@@ -1,4 +1,4 @@
-﻿namespace MiniExamples.DeterministicPhysicDemo.Graphics
+﻿namespace EtAlii.Them.Game.Graphics
 {
     public enum Colour
     {

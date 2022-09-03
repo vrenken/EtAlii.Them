@@ -1,6 +1,6 @@
 ﻿using Svelto.ECS;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics
+namespace EtAlii.Them.Game.Physics
 {
     public static class GameGroups
     {

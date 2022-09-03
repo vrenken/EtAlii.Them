@@ -1,4 +1,4 @@
-﻿namespace FixedMaths
+﻿namespace EtAlii.Them.Game.FixedMaths
 {
     public enum Operation
     {

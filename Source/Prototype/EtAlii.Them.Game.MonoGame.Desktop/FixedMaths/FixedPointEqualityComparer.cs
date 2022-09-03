@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FixedMaths
+namespace EtAlii.Them.Game.FixedMaths
 {
     public class FixedPointEqualityComparer : IEqualityComparer<FixedPoint>
     {

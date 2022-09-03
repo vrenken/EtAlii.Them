@@ -1,9 +1,9 @@
-﻿using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Physics.CollisionStructures;
-using MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents;
+﻿using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game.Physics.CollisionStructures;
+using EtAlii.Them.Game.Physics.EntityComponents;
 using Svelto.ECS;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.Engines
+namespace EtAlii.Them.Game.Physics.Engines
 {
     public class DynamicBoxVsBoxCollisionsEngine : IQueryingEntitiesEngine, IScheduledPhysicsEngine
     {

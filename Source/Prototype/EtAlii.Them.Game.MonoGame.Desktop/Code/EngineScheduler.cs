@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using FixedMaths;
+using EtAlii.Them.Game.FixedMaths;
 using Svelto.ECS.Schedulers;
 
-namespace MiniExamples.DeterministicPhysicDemo
+namespace EtAlii.Them.Game
 {
+    using EtAlii.Them.Game.Physics.Engines;
+
     public class EngineScheduler : IEngineScheduler
     {
         public EngineScheduler

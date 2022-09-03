@@ -1,7 +1,9 @@
-﻿using MiniExamples.DeterministicPhysicDemo.Graphics;
+﻿using EtAlii.Them.Game;
 
-namespace MiniExamples.DeterministicPhysicDemo
+namespace EtAlii.Them.Game
 {
+    using EtAlii.Them.Game.Graphics;
+
     /// <summary>
     /// Main entry, this is one of the many strategies possible to have a composition root. None of these strategies
     /// are tied to Svelto

@@ -1,10 +1,10 @@
 ﻿using System;
 using Svelto.ECS;
-using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Physics.Descriptors;
-using MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents;
+using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game.Physics.Descriptors;
+using EtAlii.Them.Game.Physics.EntityComponents;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.Builders
+namespace EtAlii.Them.Game.Physics.Builders
 {
     /// <summary>
     /// Factory to build Rigidbody Entities. This is not a pattern, you can use or not use factories and design

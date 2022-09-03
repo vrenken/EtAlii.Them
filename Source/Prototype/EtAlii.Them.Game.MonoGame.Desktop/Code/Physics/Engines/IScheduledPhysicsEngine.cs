@@ -1,7 +1,7 @@
 ﻿using System;
-using FixedMaths;
+using EtAlii.Them.Game.FixedMaths;
 
-namespace MiniExamples.DeterministicPhysicDemo
+namespace EtAlii.Them.Game.Physics.Engines
 {
     public interface IScheduledPhysicsEngine
     {

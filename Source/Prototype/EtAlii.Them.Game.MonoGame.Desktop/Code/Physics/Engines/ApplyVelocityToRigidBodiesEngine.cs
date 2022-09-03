@@ -1,8 +1,8 @@
-﻿using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents;
+﻿using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game.Physics.EntityComponents;
 using Svelto.ECS;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.Engines
+namespace EtAlii.Them.Game.Physics.Engines
 {
     public class ApplyVelocityToRigidBodiesEngine : IQueryingEntitiesEngine, IScheduledPhysicsEngine
     {

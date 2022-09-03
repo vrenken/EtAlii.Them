@@ -1,6 +1,6 @@
-﻿using FixedMaths;
+﻿using EtAlii.Them.Game.FixedMaths;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.CollisionStructures
+namespace EtAlii.Them.Game.Physics.CollisionStructures
 {
     public readonly struct AABB
     {

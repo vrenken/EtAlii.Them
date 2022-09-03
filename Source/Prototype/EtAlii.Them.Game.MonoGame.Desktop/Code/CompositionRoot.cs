@@ -1,13 +1,15 @@
-using FixedMaths;
+using EtAlii.Them.Game.FixedMaths;
 using Svelto.ECS;
 using Svelto.ECS.Schedulers;
-using MiniExamples.DeterministicPhysicDemo.Graphics;
-using MiniExamples.DeterministicPhysicDemo.Physics;
-using MiniExamples.DeterministicPhysicDemo.Physics.Builders;
-using MiniExamples.DeterministicPhysicDemo.Physics.Engines;
+using EtAlii.Them.Game;
+using EtAlii.Them.Game.Physics;
+using EtAlii.Them.Game.Physics.Builders;
+using EtAlii.Them.Game.Physics.Engines;
 
-namespace MiniExamples.DeterministicPhysicDemo
+namespace EtAlii.Them.Game
 {
+    using EtAlii.Them.Game.Graphics;
+
     /// <summary>
     /// Composing Engines Root, Scheduler and other project related objects.
     /// </summary>

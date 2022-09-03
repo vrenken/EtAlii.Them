@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using FixedMaths.Data;
+using EtAlii.Them.Game.FixedMaths.Data;
 
-namespace FixedMaths
+namespace EtAlii.Them.Game.FixedMaths
 {
     public static class MathFixedPoint
     {

@@ -1,4 +1,4 @@
-﻿namespace MiniExamples.DeterministicPhysicDemo.Graphics.Extensions
+﻿namespace EtAlii.Them.Game.Graphics.Extensions
 {
     public static class ColourExtensions
     {

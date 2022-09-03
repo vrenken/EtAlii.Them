@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace EtAlii.Them.Game.Desktop;
+namespace EtAlii.Them.Game;
 
 public class Game1 : Microsoft.Xna.Framework.Game
 {

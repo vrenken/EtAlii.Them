@@ -1,11 +1,13 @@
 ﻿using System;
 using Svelto.ECS;
-using MiniExamples.DeterministicPhysicDemo.Graphics;
-using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents;
+using EtAlii.Them.Game;
+using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game.Physics.EntityComponents;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.Engines
+namespace EtAlii.Them.Game.Physics.Engines
 {
+    using EtAlii.Them.Game.Graphics;
+
     public class DebugPhysicsDrawEngine : IQueryingEntitiesEngine, IScheduledGraphicsEngine
     {
         public DebugPhysicsDrawEngine(IGraphics graphics)

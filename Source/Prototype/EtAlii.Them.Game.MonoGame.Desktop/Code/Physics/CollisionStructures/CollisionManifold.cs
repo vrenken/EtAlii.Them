@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents;
+using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game.Physics.EntityComponents;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.CollisionStructures
+namespace EtAlii.Them.Game.Physics.CollisionStructures
 {
     public struct CollisionManifold : IEquatable<CollisionManifold>
     {

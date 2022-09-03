@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace FixedMaths.Data
+namespace EtAlii.Them.Game.FixedMaths.Data
 {
     public class ProcessedTableService
     {

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
-using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Graphics;
+using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game;
 
-namespace MiniExamples.DeterministicPhysicDemo
+namespace EtAlii.Them.Game
 {
+    using EtAlii.Them.Game.Graphics;
+
     /// <summary>
     /// A simple experiment, not related to Svelto, to have a reusable GameLoop
     /// </summary>

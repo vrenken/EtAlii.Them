@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
-using MiniExamples.DeterministicPhysicDemo.Graphics;
+using EtAlii.Them.Game;
 
-namespace MiniExamples.DeterministicPhysicDemo
+namespace EtAlii.Them.Game
 {
+    using EtAlii.Them.Game.Graphics;
+
     public interface IEngineSchedulerReporter
     {
         void        RecordTicksSpent(string engine, long delta);

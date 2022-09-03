@@ -1,7 +1,7 @@
 ﻿using Svelto.ECS;
-using FixedMaths;
+using EtAlii.Them.Game.FixedMaths;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents
+namespace EtAlii.Them.Game.Physics.EntityComponents
 {
     public struct TransformEntityComponent : IEntityComponent
     {

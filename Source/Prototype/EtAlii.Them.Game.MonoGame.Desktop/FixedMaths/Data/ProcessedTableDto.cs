@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FixedMaths.Data
+namespace EtAlii.Them.Game.FixedMaths.Data
 {
     public class ProcessedTableDto
     {

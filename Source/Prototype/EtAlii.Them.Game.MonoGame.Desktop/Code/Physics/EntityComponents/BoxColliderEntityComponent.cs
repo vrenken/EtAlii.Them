@@ -1,8 +1,8 @@
 ﻿using Svelto.ECS;
-using FixedMaths;
-using MiniExamples.DeterministicPhysicDemo.Physics.CollisionStructures;
+using EtAlii.Them.Game.FixedMaths;
+using EtAlii.Them.Game.Physics.CollisionStructures;
 
-namespace MiniExamples.DeterministicPhysicDemo.Physics.EntityComponents
+namespace EtAlii.Them.Game.Physics.EntityComponents
 {
     public struct BoxColliderEntityComponent : IEntityComponent
     {

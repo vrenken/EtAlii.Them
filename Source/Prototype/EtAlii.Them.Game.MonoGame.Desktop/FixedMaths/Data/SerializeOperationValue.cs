@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FixedMaths.Data
+namespace EtAlii.Them.Game.FixedMaths.Data
 {
     public class SerializeOperationValue
     {

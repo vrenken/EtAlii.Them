@@ -1,4 +1,4 @@
-﻿namespace MiniExamples.DeterministicPhysicDemo
+﻿namespace EtAlii.Them.Game
 {
     public static class EgidFactory
     {

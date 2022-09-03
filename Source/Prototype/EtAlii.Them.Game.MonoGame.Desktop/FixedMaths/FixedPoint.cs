@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace FixedMaths
+namespace EtAlii.Them.Game.FixedMaths
 {
     /// <summary>
     ///     Implements a fixed point number, based on https://en.wikipedia.org/wiki/Q_%28number_format%29

@@ -1,7 +1,9 @@
 using System;
 
-namespace MiniExamples.DeterministicPhysicDemo.Graphics
+namespace EtAlii.Them.Game
 {
+    using EtAlii.Them.Game.Graphics;
+
     public interface IGameLoop
     {
         void      Stop();

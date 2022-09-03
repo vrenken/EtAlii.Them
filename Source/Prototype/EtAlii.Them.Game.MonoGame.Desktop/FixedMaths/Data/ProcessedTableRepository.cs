@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace FixedMaths.Data
+namespace EtAlii.Them.Game.FixedMaths.Data
 {
     using System.Runtime.CompilerServices;
 
@@ -98,36 +98,35 @@ namespace FixedMaths.Data
         {
             var data     = new Dictionary<Operation, Dictionary<int, int>>();
             var assembly = Assembly.GetExecutingAssembly();
-            using (var stream = assembly.GetManifestResourceStream("EtAlii.Them.Game.FixedMaths.ProcessedTableData.math-lut.dat"))
+
+            using var stream = assembly.GetManifestResourceStream("EtAlii.Them.Game.FixedMaths.ProcessedTableData.math-lut.dat");
+            using var sr = new StreamReader(stream!);
+
+            var lines    = new string[3];
+            var readLine = 0;
+            while (sr.Peek() >= 0)
             {
-                using var sr = new StreamReader(stream);
+                lines[readLine] =  sr.ReadLine();
+                readLine        += 1;
 
-                var lines    = new string[3];
-                var readLine = 0;
-                while (sr.Peek() >= 0)
-                {
-                    lines[readLine] =  sr.ReadLine();
-                    readLine        += 1;
+                if (readLine != 3)
+                    continue;
 
-                    if (readLine != 3)
-                        continue;
+                if (!int.TryParse(lines[0], out var operation))
+                    throw new Exception("non-int value at index 0");
 
-                    if (!int.TryParse(lines[0], out var operation))
-                        throw new Exception("non-int value at index 0");
+                if (!int.TryParse(lines[1], out var key))
+                    throw new Exception("non-int value at index 1");
 
-                    if (!int.TryParse(lines[1], out var key))
-                        throw new Exception("non-int value at index 1");
+                if (!int.TryParse(lines[2], out var value))
+                    throw new Exception("non-int value at index 2");
 
-                    if (!int.TryParse(lines[2], out var value))
-                        throw new Exception("non-int value at index 2");
+                if (!data.ContainsKey((Operation) operation))
+                    data[(Operation) operation] = new Dictionary<int, int>();
 
-                    if (!data.ContainsKey((Operation) operation))
-                        data[(Operation) operation] = new Dictionary<int, int>();
+                data[(Operation) operation][key] = value;
 
-                    data[(Operation) operation][key] = value;
-
-                    readLine = 0;
-                }
+                readLine = 0;
             }
 
             return new ProcessedTableRepository(data);

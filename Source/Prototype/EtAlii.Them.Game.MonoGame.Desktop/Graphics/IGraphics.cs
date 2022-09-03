@@ -1,6 +1,6 @@
-﻿using MiniExamples.DeterministicPhysicDemo.Graphics;
+﻿using EtAlii.Them.Game;
 
-namespace MiniExamples.DeterministicPhysicDemo.Graphics
+namespace EtAlii.Them.Game.Graphics
 {
     public interface IGraphics
     {

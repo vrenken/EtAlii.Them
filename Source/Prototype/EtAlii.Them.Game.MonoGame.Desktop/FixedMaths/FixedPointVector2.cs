@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace FixedMaths
+namespace EtAlii.Them.Game.FixedMaths
 {
     public readonly struct FixedPointVector2:IEquatable<FixedPointVector2>
     {
