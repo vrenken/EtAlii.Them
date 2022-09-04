@@ -1,10 +1,10 @@
 {
-    "name": "Game.World.Tests",
-    "rootNamespace": "Game.World.Tests",
+    "name": "Game.TechTree.Tests",
+    "rootNamespace": "Game.TechTree.Tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Game.World"
+        "Game.TechTree"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

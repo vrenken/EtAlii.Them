@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a9a52b4b6a460fb273243df2ab9d0e, type: 3}
+  m_Name: Base
+  m_EditorClassIdentifier: 
+  GameObject: {fileID: 0}
+  Tile: {fileID: 0}
+  Health: 0
+  MaxHealth: 0

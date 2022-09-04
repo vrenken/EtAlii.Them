@@ -1,9 +1,7 @@
 {
-    "name": "Game.Units",
-    "rootNamespace": "Game.Units",
-    "references": [
-        "Game.Buildings"
-    ],
+    "name": "Game.TechTree",
+    "rootNamespace": "Game.TechTree",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
