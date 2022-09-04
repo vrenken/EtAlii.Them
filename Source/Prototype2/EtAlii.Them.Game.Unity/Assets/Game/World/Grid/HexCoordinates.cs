@@ -1,6 +1,5 @@
 namespace Game.World
 {
-    using System;
     using UnityEngine;
 
     public class HexCoordinates : MonoBehaviour
@@ -9,6 +8,7 @@ namespace Game.World
         public static float yOffset = 1f;
         public static float zOffset = 1.73f;
 
+        internal Vector3Int OffsetCoordinates => offsetCoordinates;
         [Header("Offset coordinates")]
         [SerializeField] private Vector3Int offsetCoordinates;
 
