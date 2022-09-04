@@ -20,8 +20,8 @@ namespace Game.World
         private Vector3Int ConvertPositionToOffset(Vector3 position)
         {
             var x = Mathf.CeilToInt(position.x / xOffset);
-            var y = Mathf.RoundToInt(position.x / yOffset);
-            var z = Mathf.RoundToInt(position.x / zOffset);
+            var y = Mathf.RoundToInt(position.y / yOffset);
+            var z = Mathf.RoundToInt(position.z / zOffset);
             return new Vector3Int(x, y, z);
         }
     }

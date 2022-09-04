@@ -2,7 +2,6 @@ namespace Game.World
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq.Expressions;
     using UnityEngine;
 
     public class HexGrid : MonoBehaviour
@@ -26,7 +25,7 @@ namespace Game.World
 
         public Vector3Int[] GetNeighbours(Vector3Int coordinates)
         {
-            if (_tiles.ContainsKey(coordinates))
+            if (!_tiles.ContainsKey(coordinates))
             {
                 return Array.Empty<Vector3Int>();
             }
