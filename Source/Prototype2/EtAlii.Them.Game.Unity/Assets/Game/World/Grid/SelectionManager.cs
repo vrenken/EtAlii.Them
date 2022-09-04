@@ -1,5 +1,6 @@
 namespace Game.World
 {
+    using System;
     using UnityEngine;
 
     public class SelectionManager : MonoBehaviour
@@ -9,6 +10,8 @@ namespace Game.World
         public LayerMask selectionMask;
 
         public HexGrid grid;
+        private Vector3Int[] items = Array.Empty<Vector3Int>();
+
         private void Awake()
         {
             if (mainCamera == null)
@@ -23,11 +26,14 @@ namespace Game.World
             {
                 var hex = result.GetComponent<Hex>();
 
-                var neighbors = grid.GetNeighbours(hex.HexCoordinates);
-                Debug.Log($"Neighbors for ({hex.HexCoordinates}) are:");
-                foreach (var neighbor in neighbors)
+                foreach (var item in items)
                 {
-                    Debug.Log($"({neighbor})");
+                    grid.GetTile(item).DisableHighlight();
+                }
+                items = grid.GetNeighbours(hex.HexCoordinates);
+                foreach (var item in items)
+                {
+                    grid.GetTile(item).EnableHighlight();
                 }
             }
         }
