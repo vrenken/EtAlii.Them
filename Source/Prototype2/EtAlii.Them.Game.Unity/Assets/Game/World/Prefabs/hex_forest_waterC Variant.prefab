@@ -105,15 +105,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 0
     faceDetails:
-      topLeft: 0
-      top: 0
-      topRight: 0
-      left: 0
-      center: 0
-      right: 0
-      bottomLeft: 0
-      bottom: 0
-      bottomRight: 0
+      topLeft: 15
+      top: 15
+      topRight: 15
+      left: 15
+      center: 15
+      right: 15
+      bottomLeft: 15
+      bottom: 15
+      bottomRight: 15
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0
@@ -121,15 +121,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 1
     faceDetails:
-      topLeft: 0
-      top: 0
-      topRight: 0
-      left: 0
-      center: 0
-      right: 0
-      bottomLeft: 0
-      bottom: 0
-      bottomRight: 0
+      topLeft: 13
+      top: 13
+      topRight: 13
+      left: 13
+      center: 13
+      right: 13
+      bottomLeft: 13
+      bottom: 13
+      bottomRight: 13
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0
@@ -169,15 +169,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 5
     faceDetails:
-      topLeft: 0
-      top: 0
-      topRight: 0
-      left: 0
-      center: 0
-      right: 0
-      bottomLeft: 0
-      bottom: 0
-      bottomRight: 0
+      topLeft: 15
+      top: 15
+      topRight: 15
+      left: 15
+      center: 15
+      right: 15
+      bottomLeft: 15
+      bottom: 15
+      bottomRight: 15
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0
@@ -185,15 +185,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 4
     faceDetails:
-      topLeft: 0
-      top: 0
-      topRight: 0
-      left: 0
-      center: 0
-      right: 0
-      bottomLeft: 0
-      bottom: 0
-      bottomRight: 0
+      topLeft: 13
+      top: 13
+      topRight: 13
+      left: 13
+      center: 13
+      right: 13
+      bottomLeft: 13
+      bottom: 13
+      bottomRight: 13
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0
@@ -201,15 +201,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 7
     faceDetails:
-      topLeft: 0
-      top: 0
-      topRight: 0
-      left: 0
-      center: 0
-      right: 0
-      bottomLeft: 0
-      bottom: 0
-      bottomRight: 0
+      topLeft: 15
+      top: 15
+      topRight: 15
+      left: 15
+      center: 15
+      right: 15
+      bottomLeft: 15
+      bottom: 15
+      bottomRight: 15
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0
@@ -217,15 +217,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 6
     faceDetails:
-      topLeft: 0
-      top: 0
-      topRight: 0
-      left: 0
-      center: 0
-      right: 0
-      bottomLeft: 0
-      bottom: 0
-      bottomRight: 0
+      topLeft: 13
+      top: 13
+      topRight: 13
+      left: 13
+      center: 13
+      right: 13
+      bottomLeft: 13
+      bottom: 13
+      bottomRight: 13
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0
