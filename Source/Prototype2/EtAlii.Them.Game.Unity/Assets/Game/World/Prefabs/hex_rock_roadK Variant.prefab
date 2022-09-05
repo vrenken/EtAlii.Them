@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78a1a494a47c5534fafedc507446e2ce, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78a1a494a47c5534fafedc507446e2ce, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78a1a494a47c5534fafedc507446e2ce, type: 3}
       propertyPath: m_LocalRotation.y
@@ -37,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78a1a494a47c5534fafedc507446e2ce, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78a1a494a47c5534fafedc507446e2ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -89,6 +89,158 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
   isGlowing: 0
+--- !u!114 &8295987380782603482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158204805618805403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69cfbd3de06cad4eb3b2e8fe41a5326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_tesseraSerializationVersion: 1
+  palette: {fileID: 0}
+  faceDetails:
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 0
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 1
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 2
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 3
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 5
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 4
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 7
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  - offset: {x: 0, y: 0, z: 0}
+    faceDir: 6
+    faceDetails:
+      topLeft: 0
+      top: 0
+      topRight: 0
+      left: 0
+      center: 0
+      right: 0
+      bottomLeft: 0
+      bottom: 0
+      bottomRight: 0
+      hexRightAndTopRight: 0
+      hexTopLeftAndLeft: 0
+      hexLeftAndBottomLeft: 0
+      hexBottomRightAndRight: 0
+  offsets:
+  - {x: 0, y: 0, z: 0}
+  center: {x: 0, y: 0, z: 0}
+  tileSize: {x: 1, y: 1, z: 1}
+  rotatable: 1
+  reflectable: 1
+  rotationGroupType: 3
+  symmetric: 1
+  instantiateChildrenOnly: 0
 --- !u!114 &9040132948909743109
 MonoBehaviour:
   m_ObjectHideFlags: 0

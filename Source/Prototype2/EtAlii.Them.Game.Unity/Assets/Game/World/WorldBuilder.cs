@@ -1,9 +1,8 @@
 namespace Game.World
 {
     using System.Collections;
-    using UnityEngine;
-    
-    public class WorldBuilder : MonoBehaviour
+
+    public class WorldBuilder
     {
         public IEnumerable Build(WorldManager manager)
         {
