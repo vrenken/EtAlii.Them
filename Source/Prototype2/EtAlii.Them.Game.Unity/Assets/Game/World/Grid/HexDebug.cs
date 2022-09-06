@@ -17,7 +17,8 @@ namespace Game.World
             if (hexCoordinates != null)
             {
                 var coordinates = hexCoordinates.OffsetCoordinates;
-                Handles.Label(transform.position, coordinates.ToString());
+                Handles.Label(transform.position + Vector3.left * 0.5f, coordinates.ToString());
+                //Handles.Label(transform.position, $"({coordinates.z}, {coordinates.y}, {coordinates.x})");
             }
         }
     }

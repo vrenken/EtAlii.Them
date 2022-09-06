@@ -12,15 +12,17 @@ namespace Game.World.Tests
             // Arrange.
 
             // Act.
+            var builder = new WorldBuilder();
 
             // Assert.
+            Assert.NotNull(builder);
         }
 
         [UnityTest]
         public IEnumerator WorldBuilder_Create_With_Start_Land()
         {
             // Arrange.
-
+            
             // Act.
 
             // Assert.

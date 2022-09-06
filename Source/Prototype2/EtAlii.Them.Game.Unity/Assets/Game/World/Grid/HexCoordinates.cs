@@ -19,9 +19,9 @@ namespace Game.World
 
         private Vector3Int ConvertPositionToOffset(Vector3 position)
         {
-            var x = Mathf.CeilToInt(position.x / xOffset);
-            var y = Mathf.RoundToInt(position.y / yOffset);
-            var z = Mathf.RoundToInt(position.z / zOffset);
+            var x = Mathf.CeilToInt((position.x - 0.5f) / xOffset); // Small correction to cope with Tessera tile positioning.
+            var y = Mathf.CeilToInt(position.y / yOffset);
+            var z = Mathf.CeilToInt(position.z / zOffset);
             return new Vector3Int(x, y, z);
         }
     }
