@@ -243,15 +243,15 @@ MonoBehaviour:
   - offset: {x: 0, y: 0, z: 0}
     faceDir: 6
     faceDetails:
-      topLeft: 13
-      top: 13
-      topRight: 13
-      left: 13
-      center: 13
-      right: 13
-      bottomLeft: 13
-      bottom: 13
-      bottomRight: 13
+      topLeft: 5
+      top: 5
+      topRight: 5
+      left: 5
+      center: 5
+      right: 5
+      bottomLeft: 5
+      bottom: 5
+      bottomRight: 5
       hexRightAndTopRight: 0
       hexTopLeftAndLeft: 0
       hexLeftAndBottomLeft: 0

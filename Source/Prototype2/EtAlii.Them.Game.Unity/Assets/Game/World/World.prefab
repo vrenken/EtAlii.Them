@@ -98,6 +98,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8145580907188799387}
   - component: {fileID: 8145580907188799386}
+  - component: {fileID: 2695111252944636288}
+  - component: {fileID: 428045640290866183}
+  - component: {fileID: 6215798746797047085}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -132,6 +135,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a69a0f7b3deca24fb6b553d7b18fbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2695111252944636288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145580907188799384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75fb4d4e6a94ea3a0cda18686dcfef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  selectionMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  grid: {fileID: 8145580907188799386}
+--- !u!114 &428045640290866183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145580907188799384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ad2bf01b7a6b7409eb683402aa8669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_size: {x: 50, y: 1, z: 50}
+  m_center: {x: 0, y: 0, z: 0}
+  modelType: 0
+  tiles:
+  - tile: {fileID: -2460511613877012551, guid: ad4c61a4a6b0bb040bb81780d605ed10, type: 3}
+    weight: 2
+  - tile: {fileID: 6216384912202328785, guid: 10c891080d7ea4b4698c882e8886acf4, type: 3}
+    weight: 0.01
+  - tile: {fileID: -3752559100967958068, guid: b67be464d2a262747bd72afdcf2cd3a5, type: 3}
+    weight: 1
+  - tile: {fileID: -5531147536493463321, guid: 1368bffbc347de64ba707b297323a238, type: 3}
+    weight: 1
+  - tile: {fileID: -8591498266132699957, guid: 49bd7a9d1aacab04d80baf49e631b728, type: 3}
+    weight: 0.01
+  - tile: {fileID: -2335384309499031676, guid: a5b2818fd16589843a7f72e3e7e6ad09, type: 3}
+    weight: 0.1
+  - tile: {fileID: -4694255234175698594, guid: ea651b17b83e43a45b4c7cc8ac782e61, type: 3}
+    weight: 0.1
+  - tile: {fileID: -2663729807681685251, guid: 5cf2186c6b702424780b41188b2efd5c, type: 3}
+    weight: 0.1
+  - tile: {fileID: -1482303251703726821, guid: ddd52e2a2226eb04092303511f14cd30, type: 3}
+    weight: 0.1
+  - tile: {fileID: 2826207508401510511, guid: 76623f55f5e4a4c499825b0eff47f603, type: 3}
+    weight: 0.1
+  - tile: {fileID: 2892201997625664031, guid: e403695e5d92ef2458e8a21c0006fbfc, type: 3}
+    weight: 0.1
+  - tile: {fileID: -6324400967943416942, guid: 843a20bbbcbc4d14c99342ab085ab18e, type: 3}
+    weight: 0.1
+  - tile: {fileID: -4278036011504148742, guid: b33ad8cb30f02c3458c521946b1b5511, type: 3}
+    weight: 0.1
+  - tile: {fileID: -2914685036793023996, guid: d881b9b109a3324439d7d14edbb7340a, type: 3}
+    weight: 0.1
+  - tile: {fileID: -9072044701111398519, guid: d6c3f7cb84817094eac58bcd036d3135, type: 3}
+    weight: 0.75
+  - tile: {fileID: 676694580398851328, guid: 9865406e0b2f2154eab654ae6033cf21, type: 3}
+    weight: 0.1
+  - tile: {fileID: -8367655213896631972, guid: 08e846ea813324b46bfa7f51a922d445, type: 3}
+    weight: 0.5
+  - tile: {fileID: -3353997324787352123, guid: 694c220ff178c6b48a13da797e184af7, type: 3}
+    weight: 0.5
+  - tile: {fileID: -3353997324787352123, guid: 694c220ff178c6b48a13da797e184af7, type: 3}
+    weight: 1
+  - tile: {fileID: -6140284869703308600, guid: ac220cf294971594799e052ddca98390, type: 3}
+    weight: 2
+  samples: []
+  overlapSize: {x: 3, y: 3, z: 3}
+  tileSize: {x: 2, y: 1, z: 1}
+  backtrack: 0
+  seed: 0
+  retries: 5
+  stepLimit: 0
+  algorithm: 0
+  recordUndo: 1
+  failureMode: 0
+  uncertaintyTile: {fileID: 0}
+  contradictionTile: {fileID: 0}
+  scaleUncertainyTile: 1
+  skyBox: {fileID: 0}
+  searchInitialConstraints: 1
+  surfaceMesh: {fileID: 0}
+  surfaceOffset: 0
+  surfaceSmoothNormals: 0
+  filterSurfaceSubmeshTiles: 0
+  surfaceSubmeshTiles: []
+--- !u!114 &6215798746797047085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145580907188799384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272e663b31cbb094b8a8f649fc84e4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  tileMappings:
+  - from: {fileID: -6140284869703308600, guid: ac220cf294971594799e052ddca98390, type: 3}
+    to: {fileID: 1628892355413545294, guid: 56bc0335ed33f2241817d9a871507e19, type: 3}
+    instantiateChildrenOnly: 0
 --- !u!1 &8145580907697959146
 GameObject:
   m_ObjectHideFlags: 0
