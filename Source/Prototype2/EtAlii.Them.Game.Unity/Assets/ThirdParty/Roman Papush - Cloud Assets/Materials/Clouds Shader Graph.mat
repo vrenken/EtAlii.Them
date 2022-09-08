@@ -40,27 +40,27 @@ Material:
     - Vector1_2BA361A8: 2
     - Vector1_350643F1: 0.3
     - Vector1_4CE104D9: 1
-    - Vector1_5536221E: 0.4
+    - Vector1_5536221E: 0.3
     - Vector1_58F7D078: 0
     - Vector1_8AAD665C: 0.25
-    - Vector1_8F075DBC: 0.2
+    - Vector1_8F075DBC: 0.01
     - Vector1_9058DE8C: 0.5
     - Vector1_919C4B0: 2
     - Vector1_A664731F: 500
     - Vector1_B4ED823D: 15
     - Vector1_E43D3892: 13
     - Vector1_E505CA4B: 6
-    - Vector1_EED1A887: 5
+    - Vector1_EED1A887: 2
     - Vector1_F95C6CB5: 100
     - Vector1_FADC0395: -3
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_2CFB5E2A: {r: 1, g: 1, b: 1, a: 0.72156864}
-    - Color_58195353: {r: 0.4269313, g: 0.6269237, b: 0.7735849, a: 0}
+    - Color_2CFB5E2A: {r: 1, g: 1, b: 1, a: 0.9254902}
+    - Color_58195353: {r: 0.58852494, g: 0.7449823, b: 0.8584906, a: 0}
     - Color_AB43344: {r: 0.029157283, g: 0.029157283, b: 0.029157283, a: 1}
     - Color_D208A15F: {r: 0.3041965, g: 0, b: 0.20704474, a: 1}
-    - Vector4_1696EE66: {r: 0, g: 0.975, b: -0.5, a: 2.7}
+    - Vector4_1696EE66: {r: 0, g: 0.75, b: -0.5, a: 2.7}
     - Vector4_484BA326: {r: 1, g: 0, b: 0, a: 90}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
