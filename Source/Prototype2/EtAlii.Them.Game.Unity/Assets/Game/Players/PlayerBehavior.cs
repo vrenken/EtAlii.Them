@@ -1,4 +1,4 @@
-namespace Game.Units
+namespace Game.Players
 {
     using System.Collections;
     // using Game.Buildings;
