@@ -1,3 +1,4 @@
+// ReSharper disable All
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;

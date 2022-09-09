@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿// ReSharper disable All
+using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEditor;
