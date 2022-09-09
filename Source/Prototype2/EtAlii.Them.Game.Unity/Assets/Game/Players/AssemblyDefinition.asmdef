@@ -1,9 +1,7 @@
 {
-    "name": "Game.World",
-    "rootNamespace": "Game.World",
+    "name": "Game.Players",
+    "rootNamespace": "Game.Players",
     "references": [
-        "Game.Buildings",
-        "Game.Units",
         "Unity.InputSystem"
     ],
     "includePlatforms": [],
