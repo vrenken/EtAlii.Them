@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_water_detail Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 810da9e78352ba04fb5fecbba8a0e137, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810da9e78352ba04fb5fecbba8a0e137, type: 3}
 --- !u!1 &6401417406351193123 stripped

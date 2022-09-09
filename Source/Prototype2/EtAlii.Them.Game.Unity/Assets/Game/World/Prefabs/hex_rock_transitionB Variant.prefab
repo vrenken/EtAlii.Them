@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_rock_transitionB Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd227913edfee30459e165c941fb9a9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd227913edfee30459e165c941fb9a9a, type: 3}
 --- !u!1 &3662237743245246644 stripped
@@ -101,6 +105,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetCoordinates: {x: 0, y: 0, z: 0}
+--- !u!114 &2894969586803410764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3662237743245246644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5028729651914175146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,15 +281,3 @@ MonoBehaviour:
   rotationGroupType: 3
   symmetric: 1
   instantiateChildrenOnly: 0
---- !u!114 &2894969586803410764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3662237743245246644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

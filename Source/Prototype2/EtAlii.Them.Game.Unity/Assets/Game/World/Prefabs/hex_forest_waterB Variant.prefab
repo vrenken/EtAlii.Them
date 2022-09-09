@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_forest_waterB Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e7d474587ba5f8468c07cdf645b2f00, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7d474587ba5f8468c07cdf645b2f00, type: 3}
 --- !u!1 &1306627033283299119 stripped
@@ -62,6 +66,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e7d474587ba5f8468c07cdf645b2f00, type: 3}
   m_PrefabInstance: {fileID: 2225758485445556862}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5617326479753436495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306627033283299119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-4045041140242863442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,18 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5661795105635411633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306627033283299119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-5617326479753436495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

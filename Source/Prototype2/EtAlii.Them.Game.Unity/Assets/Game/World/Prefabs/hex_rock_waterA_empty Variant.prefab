@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_rock_waterA_empty Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d939968b397cdb548a78128560f58bc0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d939968b397cdb548a78128560f58bc0, type: 3}
 --- !u!1 &2454254601008671326 stripped
@@ -62,6 +66,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d939968b397cdb548a78128560f58bc0, type: 3}
   m_PrefabInstance: {fileID: 3372679760964507407}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7597090056298244551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2454254601008671326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-5603922730563453864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,18 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &4423114179807750542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2454254601008671326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-7597090056298244551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_sand_roadG Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ac6677d4970e694eb02eacd115a790f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ac6677d4970e694eb02eacd115a790f, type: 3}
 --- !u!1 &6697057356543214478 stripped
@@ -72,6 +76,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 955e14b1ab1f4218ae6d6c03f5f555ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1758505542971294771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697057356543214478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &-483981013866454067
@@ -254,18 +270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetCoordinates: {x: 0, y: 0, z: 0}
 --- !u!114 &3063901907481631496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6697057356543214478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-1758505542971294771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

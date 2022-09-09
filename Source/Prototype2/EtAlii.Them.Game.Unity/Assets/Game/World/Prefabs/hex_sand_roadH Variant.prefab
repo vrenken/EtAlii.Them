@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_sand_roadH Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78fe493c3bbfa2e45b22e6f68767fe2a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78fe493c3bbfa2e45b22e6f68767fe2a, type: 3}
 --- !u!1 &6296844247109633958 stripped
@@ -253,7 +257,7 @@ MonoBehaviour:
   rotationGroupType: 3
   symmetric: 1
   instantiateChildrenOnly: 0
---- !u!114 &8512494738669446614
+--- !u!114 &5875072000615708873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5875072000615708873
+--- !u!114 &8512494738669446614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

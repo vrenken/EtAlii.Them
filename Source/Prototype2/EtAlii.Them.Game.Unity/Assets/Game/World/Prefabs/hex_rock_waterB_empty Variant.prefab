@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_rock_waterB_empty Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e64e6d57b5af1e340ae01e144516dbce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e64e6d57b5af1e340ae01e144516dbce, type: 3}
 --- !u!1 &726913774949952090 stripped
@@ -62,6 +66,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e64e6d57b5af1e340ae01e144516dbce, type: 3}
   m_PrefabInstance: {fileID: 493124282058528523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8320585502255718618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726913774949952090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-2642608086898946317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,15 +281,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
   isGlowing: 0
---- !u!114 &-8320585502255718618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726913774949952090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

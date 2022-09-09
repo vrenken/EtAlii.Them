@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_rock_roadD Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 43acd313c837a5142b8f28b1b9c542e1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43acd313c837a5142b8f28b1b9c542e1, type: 3}
 --- !u!1 &7088219806336435001 stripped
@@ -62,6 +66,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 43acd313c837a5142b8f28b1b9c542e1, type: 3}
   m_PrefabInstance: {fileID: 7971093757692968552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3830632754245674344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088219806336435001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-3240966979085987731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,18 +270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetCoordinates: {x: 0, y: 0, z: 0}
 --- !u!114 &7321709438320178275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7088219806336435001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-3830632754245674344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

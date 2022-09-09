@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_forest_waterA_empty Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ae9000f081c1d9146a7c00f0424505b7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae9000f081c1d9146a7c00f0424505b7, type: 3}
 --- !u!1 &8179456331227348244 stripped
@@ -239,6 +243,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetCoordinates: {x: 0, y: 0, z: 0}
+--- !u!114 &-4786403043789995326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179456331227348244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-1566927890463923743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,18 +270,6 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
   isGlowing: 0
 --- !u!114 &3875003387364063808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8179456331227348244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-4786403043789995326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

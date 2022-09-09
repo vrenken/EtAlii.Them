@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_sand_roadF_detail Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6f29ee7819d5844b8221259ee0479fa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6f29ee7819d5844b8221259ee0479fa, type: 3}
 --- !u!1 &3742520364792818687 stripped
@@ -62,6 +66,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b6f29ee7819d5844b8221259ee0479fa, type: 3}
   m_PrefabInstance: {fileID: 4553547831564637870}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7633906915314983936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742520364792818687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-4689491436819516923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,18 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1194229772874405490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3742520364792818687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-7633906915314983936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

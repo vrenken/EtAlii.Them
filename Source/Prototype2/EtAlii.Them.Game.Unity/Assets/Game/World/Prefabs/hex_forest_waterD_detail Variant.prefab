@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_forest_waterD_detail Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12a78ef7956002748898fc7aba1ad003, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12a78ef7956002748898fc7aba1ad003, type: 3}
 --- !u!1 &6224580084965792587 stripped
@@ -76,6 +80,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
   isGlowing: 0
+--- !u!114 &-830528978517466242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6224580084965792587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3100571476259875093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,15 +281,3 @@ MonoBehaviour:
   rotationGroupType: 3
   symmetric: 1
   instantiateChildrenOnly: 0
---- !u!114 &-830528978517466242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6224580084965792587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

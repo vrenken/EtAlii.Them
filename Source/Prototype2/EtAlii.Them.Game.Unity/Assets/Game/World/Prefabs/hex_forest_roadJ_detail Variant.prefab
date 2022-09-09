@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hex_forest_roadJ_detail Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f18e5d15ea303694dbc312bc7db958ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18e5d15ea303694dbc312bc7db958ef, type: 3}
 --- !u!1 &2034752003172754611 stripped
@@ -253,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
   isGlowing: 0
---- !u!114 &8200559913855785464
+--- !u!114 &8145559102813776058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8145559102813776058
+--- !u!114 &8200559913855785464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
