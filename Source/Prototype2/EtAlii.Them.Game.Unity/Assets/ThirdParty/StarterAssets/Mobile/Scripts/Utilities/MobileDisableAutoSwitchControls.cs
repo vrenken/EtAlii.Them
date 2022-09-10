@@ -1,4 +1,3 @@
-// ReSharper disable All
 /*
 The PlayerInput component has an auto-switch control scheme action that allows automatic changing of connected devices.
 IE: Switching from Keyboard to Gamepad in-game.

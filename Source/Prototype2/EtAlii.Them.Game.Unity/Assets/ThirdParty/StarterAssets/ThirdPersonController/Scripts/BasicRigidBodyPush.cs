@@ -1,5 +1,4 @@
-﻿// ReSharper disable All
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BasicRigidBodyPush : MonoBehaviour
 {

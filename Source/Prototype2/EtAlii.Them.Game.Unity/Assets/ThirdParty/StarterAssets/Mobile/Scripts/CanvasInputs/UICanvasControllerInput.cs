@@ -1,4 +1,3 @@
-// ReSharper disable All
 using UnityEngine;
 
 namespace StarterAssets

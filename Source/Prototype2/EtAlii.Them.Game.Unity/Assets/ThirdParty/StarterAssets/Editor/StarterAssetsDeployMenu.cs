@@ -1,4 +1,3 @@
-// ReSharper disable All
 using System;
 using System.Linq;
 using StarterAssetsPackageChecker;
