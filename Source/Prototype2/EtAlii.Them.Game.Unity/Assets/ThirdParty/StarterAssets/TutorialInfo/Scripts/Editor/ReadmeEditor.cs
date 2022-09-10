@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿// ReSharper disable All
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
 using System.IO;
 using System.Reflection;
+// ReSharper disable All
 
 [CustomEditor(typeof(Readme))]
 [InitializeOnLoad]

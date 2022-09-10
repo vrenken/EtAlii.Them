@@ -1,4 +1,5 @@
-﻿using System;
+﻿// ReSharper disable All
+using System;
 using UnityEngine;
 
 public class Readme : ScriptableObject {
