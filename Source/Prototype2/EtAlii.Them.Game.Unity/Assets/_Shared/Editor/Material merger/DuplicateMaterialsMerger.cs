@@ -1,15 +1,47 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class DuplicateMaterialsMerger
 {
     [MenuItem("Assets/EtAlii/Merge duplicate materials", false, -1)]
     public static void Run()
     {
+        try
+        {
+            while (SceneManager.GetActiveScene().isDirty)
+            {
+                var wasSaved = EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+                if (!wasSaved)
+                {
+                    Debug.LogError("Error merging materials: The current scene needs to be saved before.");
+                    return;
+                }
+            }
+            
+            RunInternal();
+            Debug.Log("Succeeded merging materials");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed merging materials: {e.Message}");
+            Debug.LogError($"{e.StackTrace}");
+        }
+        finally
+        {
+            EditorUtility.ClearProgressBar();
+        }
+    }
+    
+    private static void RunInternal()
+    {
+
         var knownMaterials = new Dictionary<string, List<Material>>();
         
         var allMaterials = Selection.GetFiltered<Material>(SelectionMode.DeepAssets);
@@ -20,7 +52,7 @@ public static class DuplicateMaterialsMerger
         for(var i = 0; i < allMaterials.Length; i++)
         {
             var material = allMaterials[i];
-            EditorUtility.DisplayProgressBar("Merging duplicate materials", $"Hashing {material.name}", (float)allMaterials.Length / i);
+            EditorUtility.DisplayProgressBar("Merging duplicate materials", $"Hashing {material.name}", allMaterials.Length / (float)i);
             var hash = CreateIdentifier(material);
             if (!knownMaterials.TryGetValue(hash, out var matchingMaterials))
             {
@@ -49,6 +81,7 @@ public static class DuplicateMaterialsMerger
         var files = Directory
             .GetFiles(projectFolder, "*.*", SearchOption.AllDirectories)
             .Where(s => supportedExtensions.Contains(Path.GetExtension(s).ToLower()))
+            .Where(f => !f.Contains("PackageCache"))
             .ToArray();
 
         for (var i = 0; i < groupsToMerge.Length; i++)
@@ -61,25 +94,34 @@ public static class DuplicateMaterialsMerger
             var materialIdsToRemove = materialsToRemove.Select(ToId).ToArray();
             Debug.Log($"Replacing {materialIdToKeep} for: {string.Join(", ", materialIdsToRemove)}");
 
-            EditorUtility.DisplayProgressBar("Merging duplicate materials", $"Merging group {i}", (float)groupsToMerge.Length / i);
-
+            EditorUtility.DisplayProgressBar("Merging duplicate materials", $"Merging group {i}", groupsToMerge.Length / (float)i);
             foreach (var file in files)
             {
                 ReplaceInFiles(materialIdToKeep, materialIdsToRemove, file);
             }
 
-            foreach (var materialToRemove in materialsToRemove)
+            var assetsToRemove = materialsToRemove
+                .Select(AssetDatabase.GetAssetPath)
+                .Distinct()
+                .Where(File.Exists)
+                .ToArray();
+            foreach (var assetToRemove in assetsToRemove)
             {
-                var assetPath = AssetDatabase.GetAssetPath(materialToRemove);
-                AssetDatabase.DeleteAsset(assetPath);
+                AssetDatabase.DeleteAsset(assetToRemove);
             }
         }
 
+        AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private static void ReplaceInFiles(string idToKeep, string[] idsToRemove, string file)
     {
+        if (!File.Exists(file))
+        {
+            return;
+        }
+        
         var content = File.ReadAllText(file);
 
         foreach (var idToRemove in idsToRemove)
@@ -92,8 +134,6 @@ public static class DuplicateMaterialsMerger
     
     private static string ToId(Material material)
     {
-        // AssetDatabase.TryGetGUIDAndLocalFileIdentifier(material, out string _, out long id);
-        // return id.ToString();
         var assetPath = AssetDatabase.GetAssetPath(material);
         var guid = AssetDatabase.AssetPathToGUID(assetPath);
         return guid;
