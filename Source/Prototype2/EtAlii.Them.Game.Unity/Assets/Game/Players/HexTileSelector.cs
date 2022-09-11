@@ -14,6 +14,8 @@ namespace Game.Players
 
         public LayerMask selectionMask;
 
+        public float offsetMargin = 0.2f;
+        
         /// <summary>
         /// The update interval (in seconds).
         /// </summary>
@@ -76,13 +78,37 @@ namespace Game.Players
         }
         
         
-        private bool FindTarget(out GameObject result)
+        private bool FindTarget(out HexTile result)
         {
-            var ray = new Ray(character.transform.position + Vector3.up, Vector3.down);
+            
+            var characterPosition = character.transform.position + Vector3.up;
+            var ray = new Ray(characterPosition, Vector3.down);
             if (Physics.Raycast(ray, out var hit, selectionMask))
             {
-                result = hit.collider.gameObject;
-                return true;
+                result = hit.collider.gameObject.GetComponent<HexTile>();
+                if (result != null)
+                {
+                    // We want to also look 
+                    var direction = characterPosition - result.transform.position;
+                    if (direction.magnitude > 1f - offsetMargin)
+                    {
+                        direction.y = 0;
+                        ray = new Ray(characterPosition + character.transform.forward * offsetMargin, Vector3.down);
+                        if (Physics.Raycast(ray, out hit, selectionMask))
+                        {
+                            result = hit.collider.gameObject.GetComponent<HexTile>();
+                            return result != null;
+                        }
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
             }
 
             result = null;
