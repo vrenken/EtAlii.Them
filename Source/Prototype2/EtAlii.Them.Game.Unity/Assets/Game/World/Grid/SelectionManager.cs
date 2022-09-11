@@ -24,7 +24,7 @@ namespace Game.World
         {
             if (FindTarget(mousePosition, out GameObject result))
             {
-                var hex = result.GetComponent<Hex>();
+                var hex = result.GetComponent<HexTile>();
 
                 foreach (var item in items)
                 {

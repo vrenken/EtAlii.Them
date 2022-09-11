@@ -6,18 +6,18 @@ namespace Game.World
 
     public class HexGrid : MonoBehaviour
     {
-        private readonly Dictionary<Vector3Int, Hex> _tiles = new();
+        private readonly Dictionary<Vector3Int, HexTile> _tiles = new();
         private readonly Dictionary<Vector3Int, Vector3Int[]> _tileNeighbours = new();
 
         private void Start()
         {
-            foreach (var tile in GetComponentsInChildren<Hex>())
+            foreach (var tile in GetComponentsInChildren<HexTile>())
             {
                 _tiles[tile.HexCoordinates] = tile;
             }
         }
 
-        public Hex GetTile(Vector3Int coordinates)
+        public HexTile GetTile(Vector3Int coordinates)
         {
             _tiles.TryGetValue(coordinates, out var hex);
             return hex;

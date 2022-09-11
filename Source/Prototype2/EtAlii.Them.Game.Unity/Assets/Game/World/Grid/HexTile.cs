@@ -3,7 +3,7 @@ namespace Game.World
     using UnityEngine;
 
     [SelectionBase]
-    public class Hex : MonoBehaviour
+    public class HexTile : MonoBehaviour
     {
         private HexCoordinates hexCoordinates;
         private GlowHighlight highlight;
