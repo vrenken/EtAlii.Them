@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7b5aa386e89f774e849014f11c25aa1, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f7b5aa386e89f774e849014f11c25aa1, type: 3}
       propertyPath: m_Name
       value: hex_forest_roadE_detail Variant

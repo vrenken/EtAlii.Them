@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a2aaea9c6c002ff4e8b729fea2707182, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2aaea9c6c002ff4e8b729fea2707182, type: 3}
       propertyPath: m_Name
       value: hex_sand_waterD_detail Variant

@@ -3,6 +3,7 @@ namespace Game.World
     using System.Collections.Generic;
     using UnityEngine;
 
+    [RequireComponent(typeof(MeshRenderer))]
     public class GlowHighlight : MonoBehaviour
     {
         private readonly Dictionary<Renderer, Material[]> _glowMaterials = new();
@@ -11,10 +12,15 @@ namespace Game.World
 
         public Material glowMaterial;
 
-        public bool isGlowing = false;
+        public bool isInvisible;
+        public bool isGlowing;
 
+        private MeshRenderer _meshRenderer;
+        
         private void Awake()
         {
+            _meshRenderer = GetComponent<MeshRenderer>();
+            
             PrepareMaterials();
         }
 
@@ -53,10 +59,14 @@ namespace Game.World
             ToggleGlow();
         }
 
-        public void ToggleGlow()
+        private void ToggleGlow()
         {
             if (isGlowing)
             {
+                if (isInvisible)
+                {
+                    _meshRenderer.enabled = true;
+                }
                 foreach (var kvp in _defaultMaterials)
                 {
                     kvp.Key.materials = kvp.Value;
@@ -67,6 +77,10 @@ namespace Game.World
                 foreach (var kvp in _glowMaterials)
                 {
                     kvp.Key.materials = kvp.Value;
+                }
+                if (isInvisible)
+                {
+                    _meshRenderer.enabled = false;
                 }
             }
 

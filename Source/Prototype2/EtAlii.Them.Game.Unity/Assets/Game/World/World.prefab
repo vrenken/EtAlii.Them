@@ -100,7 +100,6 @@ GameObject:
   - component: {fileID: 8145580907188799386}
   - component: {fileID: 2695111252944636288}
   - component: {fileID: 428045640290866183}
-  - component: {fileID: 6215798746797047085}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -228,23 +227,6 @@ MonoBehaviour:
   surfaceSmoothNormals: 0
   filterSurfaceSubmeshTiles: 0
   surfaceSubmeshTiles: []
---- !u!114 &6215798746797047085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8145580907188799384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272e663b31cbb094b8a8f649fc84e4df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 0}
-  tileMappings:
-  - from: {fileID: -6140284869703308600, guid: ac220cf294971594799e052ddca98390, type: 3}
-    to: {fileID: 1628892355413545294, guid: 56bc0335ed33f2241817d9a871507e19, type: 3}
-    instantiateChildrenOnly: 0
 --- !u!1 &8145580907697959146
 GameObject:
   m_ObjectHideFlags: 0
