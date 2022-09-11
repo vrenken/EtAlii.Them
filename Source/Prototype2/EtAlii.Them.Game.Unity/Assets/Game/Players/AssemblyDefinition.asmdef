@@ -2,7 +2,8 @@
     "name": "Game.Players",
     "rootNamespace": "Game.Players",
     "references": [
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Game.World"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
