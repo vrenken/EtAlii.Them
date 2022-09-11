@@ -23,6 +23,22 @@ namespace Game.World
             return hex;
         }
 
+        public void ReplaceTile(Vector3Int coordinates, HexTile newTile)
+        {
+            if (_tiles.TryGetValue(coordinates, out var oldTile))
+            {
+                newTile.Clone(oldTile);
+                oldTile.DisableHighlight();
+                Destroy(oldTile.gameObject);
+            }
+            else
+            {
+                throw new NotSupportedException("Adding new tiles to the grid is not supported");
+            }
+            
+            _tiles[newTile.HexCoordinates] = newTile;
+        }
+        
         public Vector3Int[] GetNeighbours(Vector3Int coordinates)
         {
             if (!_tiles.ContainsKey(coordinates))
@@ -52,22 +68,22 @@ namespace Game.World
     {
         private static readonly Vector3Int[] directionsOffsetOdd = 
         {
-            new Vector3Int(-1, 0, 1), // N1
-            new Vector3Int(0, 0, 1), // N2
-            new Vector3Int(1, 0, 0), // E
-            new Vector3Int(0, 0, -1), // S2
-            new Vector3Int(-1, 0, -1), // S1
-            new Vector3Int(-1, 0, 0), // W
+            new(-1, 0, 1), // N1
+            new(0, 0, 1), // N2
+            new(1, 0, 0), // E
+            new(0, 0, -1), // S2
+            new(-1, 0, -1), // S1
+            new(-1, 0, 0), // W
         };
         
         private static readonly Vector3Int[] directionsOffsetEven = 
         {
-            new Vector3Int(0, 0, 1), // N1
-            new Vector3Int(1, 0, 1), // N2
-            new Vector3Int(1, 0, 0), // E
-            new Vector3Int(1, 0, -1), // S2
-            new Vector3Int(0, 0, -1), // S1
-            new Vector3Int(-1, 0, 0), // W
+            new(0, 0, 1), // N1
+            new(1, 0, 1), // N2
+            new(1, 0, 0), // E
+            new(1, 0, -1), // S2
+            new(0, 0, -1), // S1
+            new(-1, 0, 0), // W
         };
 
         public static Vector3Int[] GetDirectionsOffsets(int z)
