@@ -56,6 +56,10 @@ PrefabInstance:
       value: hex_forest_roadA Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8e91064df08499649aeead27b5ed2d8b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8e91064df08499649aeead27b5ed2d8b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

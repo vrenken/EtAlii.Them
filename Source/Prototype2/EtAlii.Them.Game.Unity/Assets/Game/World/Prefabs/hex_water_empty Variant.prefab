@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4116089440581097207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hex_water_empty Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}

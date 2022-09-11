@@ -56,6 +56,10 @@ PrefabInstance:
       value: hex_sand_roadF Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 31ecb5fb59c620a4da4e0cde471fae20, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 31ecb5fb59c620a4da4e0cde471fae20, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

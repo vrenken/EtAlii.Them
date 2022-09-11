@@ -56,6 +56,10 @@ PrefabInstance:
       value: hex_forest_waterB_detail Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c3e89cc7a9865da4881dccdbc94f2ee2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3e89cc7a9865da4881dccdbc94f2ee2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

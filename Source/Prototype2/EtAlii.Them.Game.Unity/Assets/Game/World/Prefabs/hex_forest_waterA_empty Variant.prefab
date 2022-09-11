@@ -56,6 +56,10 @@ PrefabInstance:
       value: hex_forest_waterA_empty Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae9000f081c1d9146a7c00f0424505b7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ae9000f081c1d9146a7c00f0424505b7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -212,7 +216,7 @@ MonoBehaviour:
   offsets:
   - {x: 0, y: 0, z: 0}
   center: {x: 0, y: 0, z: 0}
-  tileSize: {x: 1, y: 1, z: 1}
+  tileSize: {x: 2, y: 1, z: 1}
   rotatable: 1
   reflectable: 1
   rotationGroupType: 3

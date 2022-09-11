@@ -56,6 +56,10 @@ PrefabInstance:
       value: hex_sand_detail Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0591b4a39ca884a49a71cafb37dde035, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0591b4a39ca884a49a71cafb37dde035, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

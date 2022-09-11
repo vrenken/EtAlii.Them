@@ -56,6 +56,10 @@ PrefabInstance:
       value: hex_rock_roadA_detail Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd735971b8f73b8408514a748174adc5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd735971b8f73b8408514a748174adc5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
