@@ -65,7 +65,7 @@ namespace Game.World
             {
                 if (isInvisible)
                 {
-                    _meshRenderer.enabled = true;
+                    _meshRenderer.enabled = false;
                 }
                 foreach (var kvp in _defaultMaterials)
                 {
@@ -80,7 +80,7 @@ namespace Game.World
                 }
                 if (isInvisible)
                 {
-                    _meshRenderer.enabled = false;
+                    _meshRenderer.enabled = true;
                 }
             }
 
