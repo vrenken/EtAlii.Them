@@ -8,14 +8,13 @@ namespace Game.World
         private HexCoordinates hexCoordinates;
         private GlowHighlight highlight;
 
-        public void Clone(HexTile sourceTile)
+        public HexTile Clone(HexTile tilePrefab)
         {
-            hexCoordinates = sourceTile.hexCoordinates;
-            name = sourceTile.name;
-            var sourceTileTransform = sourceTile.transform;
-            var targetTileTransform = transform;
-            targetTileTransform.SetParent(sourceTileTransform.parent);
-            targetTileTransform.position = sourceTileTransform.position;
+            var sourceTileTransform = transform;
+            var newTile = Instantiate(tilePrefab, sourceTileTransform.position, Quaternion.identity, sourceTileTransform.parent);
+            newTile.hexCoordinates = hexCoordinates;
+            newTile.name = $"{tilePrefab.name} {HexCoordinates}";
+            return newTile;
         } 
         
         public Vector3Int HexCoordinates => hexCoordinates.OffsetCoordinates;

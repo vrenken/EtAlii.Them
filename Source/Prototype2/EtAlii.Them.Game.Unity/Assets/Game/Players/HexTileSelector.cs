@@ -67,7 +67,7 @@ namespace Game.Players
                 var selectedHexTile = tileGameObject.GetComponent<HexTile>();
                 if (selectedHexTile != null)
                 {
-                    if (hexTile != null)
+                    if (hexTile != null && hexTile != selectedHexTile)
                     {
                         hexTile.DisableHighlight();
 

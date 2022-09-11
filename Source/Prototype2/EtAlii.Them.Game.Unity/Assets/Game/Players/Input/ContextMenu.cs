@@ -35,9 +35,7 @@ namespace Game.Players
             {
                 var coordinates = _hexTileSelector.hexTile.HexCoordinates;
 
-                var tile = Instantiate(tilePrefab);
-
-                _hexTileSelector.hexGrid.ReplaceTile(coordinates, tile);
+                _hexTileSelector.hexGrid.ReplaceTile(coordinates, tilePrefab);
             }
         }
     }

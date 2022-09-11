@@ -23,20 +23,19 @@ namespace Game.World
             return hex;
         }
 
-        public void ReplaceTile(Vector3Int coordinates, HexTile newTile)
+        public void ReplaceTile(Vector3Int coordinates, HexTile tilePrefab)
         {
             if (_tiles.TryGetValue(coordinates, out var oldTile))
             {
-                newTile.Clone(oldTile);
+                var newTile = oldTile.Clone(tilePrefab);
                 oldTile.DisableHighlight();
                 Destroy(oldTile.gameObject);
+                _tiles[newTile.HexCoordinates] = newTile;
             }
             else
             {
                 throw new NotSupportedException("Adding new tiles to the grid is not supported");
             }
-            
-            _tiles[newTile.HexCoordinates] = newTile;
         }
         
         public Vector3Int[] GetNeighbours(Vector3Int coordinates)
