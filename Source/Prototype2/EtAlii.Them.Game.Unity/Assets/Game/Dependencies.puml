@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+package "Game.World" {
+  [World Builder]
+  
+  database "Hex Grid" {
+  [Tile]
+  }
+
+}
+
+node "Game.Units" {
+    [Unit]
+}
+
+node "Game.TechTree" {
+  database "Tech Tree" {
+  [Building Template]
+  [Unit Template]
+  }
+}
+
+node "Game.Players" {
+  [HexTileSelector] --> [Tile]
+'  [First Component] --> FTP
+}
+
+'cloud {
+'  [Example 1]
+'}
+
+'[Another Component] --> [Example 1]
+'[Example 1] --> [Folder 3]
+'[Folder 3] --> [Frame 4]
+
+@enduml
