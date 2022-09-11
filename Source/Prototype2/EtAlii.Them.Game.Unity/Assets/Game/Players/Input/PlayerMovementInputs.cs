@@ -1,10 +1,8 @@
-using UnityEngine;
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-using UnityEngine.InputSystem;
-#endif
-
 namespace Game.Players
 {
+	using UnityEngine;
+	using UnityEngine.InputSystem;
+
 	public class PlayerMovementInputs : MonoBehaviour
 	{
 		[Header("Character Input Values")]
@@ -20,51 +18,60 @@ namespace Game.Players
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
+		private PlayerInputActions _inputActions;
+
+		private void Awake()
 		{
-			MoveInput(value.Get<Vector2>());
+			_inputActions = new PlayerInputActions();
+			_inputActions.Player.Enable();
 		}
 
-		public void OnLook(InputValue value)
+		private void OnEnable()
+		{
+			_inputActions.Player.Move.performed += OnMove;
+			_inputActions.Player.Move.canceled += OnMoveCompleted;
+			_inputActions.Player.Look.performed += OnLook;
+			_inputActions.Player.Look.canceled += OnLookCompleted;
+			_inputActions.Player.Sprint.performed += OnSprint;
+			_inputActions.Player.Jump.performed += OnJump;
+		}
+
+		private void OnDisable()
+		{
+			_inputActions.Player.Move.performed -= OnMove;
+			_inputActions.Player.Move.canceled -= OnMoveCompleted;
+			_inputActions.Player.Look.performed -= OnLook;
+			_inputActions.Player.Look.canceled -= OnLookCompleted;
+			_inputActions.Player.Sprint.performed -= OnSprint;
+			_inputActions.Player.Jump.performed -= OnJump;
+		}
+
+		private void OnMove(InputAction.CallbackContext context) => move = context.ReadValue<Vector2>();
+		private void OnMoveCompleted(InputAction.CallbackContext obj) => move = Vector2.zero;
+
+		private void OnLook(InputAction.CallbackContext context)
 		{
 			if(cursorInputForLook)
 			{
-				LookInput(value.Get<Vector2>());
+				look = context.ReadValue<Vector2>();
 			}
 		}
 
-		public void OnJump(InputValue value)
+		private void OnLookCompleted(InputAction.CallbackContext context) => look = Vector2.zero;
+
+		private void OnJump(InputAction.CallbackContext context)
 		{
-			JumpInput(value.isPressed);
+			var isPressed = context.ReadValueAsButton();
+			JumpInput(isPressed);
 		}
 
-		public void OnSprint(InputValue value)
+		private void OnSprint(InputAction.CallbackContext context) 
 		{
-			SprintInput(value.isPressed);
-		}
-#endif
-
-
-		public void MoveInput(Vector2 newMoveDirection)
-		{
-			move = newMoveDirection;
-		} 
-
-		public void LookInput(Vector2 newLookDirection)
-		{
-			look = newLookDirection;
+			// We do not want to change the sprint.
+			// sprint = context.ReadValueAsButton();
 		}
 
-		public void JumpInput(bool newJumpState)
-		{
-			jump = newJumpState;
-		}
-
-		public void SprintInput(bool newSprintState)
-		{
-			sprint = newSprintState;
-		}
+		private void JumpInput(bool newJumpState) => jump = newJumpState;
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
