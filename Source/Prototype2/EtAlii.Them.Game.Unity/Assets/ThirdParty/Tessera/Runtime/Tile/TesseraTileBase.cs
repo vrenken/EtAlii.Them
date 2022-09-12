@@ -7,8 +7,8 @@ namespace Tessera
 {
     public abstract class TesseraTileBase : MonoBehaviour
     {
-        [SerializeField]
-        private int m_tesseraSerializationVersion = 1;
+        // [SerializeField]
+        // private int m_tesseraSerializationVersion = 1;
 
         /// <summary>
         /// Set this to control the colors and names used for painting on the tile.
