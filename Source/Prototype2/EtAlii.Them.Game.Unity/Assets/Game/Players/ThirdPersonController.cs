@@ -79,7 +79,7 @@ namespace Game.Players
 
         private Animator _animator;
         private CharacterController _controller;
-        private PlayerMovementInputs _input;
+        private PlayerMovement _input;
         private GameObject _mainCamera;
 
         private const float _threshold = 0.01f;
@@ -99,7 +99,7 @@ namespace Game.Players
         {
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
-            _input = GetComponent<PlayerMovementInputs>();
+            _input = GetComponent<PlayerMovement>();
 
             AssignAnimationIDs();
 

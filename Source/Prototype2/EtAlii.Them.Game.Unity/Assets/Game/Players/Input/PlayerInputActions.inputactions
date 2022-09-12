@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ContextMenu",
+                    "name": "ShowContextMenu",
                     "type": "Button",
                     "id": "eaa0f460-1847-4bed-96b2-71ca9df02bc5",
                     "expectedControlType": "Button",
@@ -235,7 +235,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "ContextMenu",
+                    "action": "ShowContextMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -246,7 +246,77 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "ContextMenu",
+                    "action": "ShowContextMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ContextMenu",
+            "id": "670b7562-0d4a-4648-bdce-93b706bd7bf0",
+            "actions": [
+                {
+                    "name": "HideContextMenu",
+                    "type": "Button",
+                    "id": "6b895088-93bb-437e-ad5a-06d33b5692fe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Build",
+                    "type": "Button",
+                    "id": "6422a638-2efb-4492-b7f7-a9111084f4a3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "33ee8d5b-39bd-49ef-9e48-83873aae934f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "HideContextMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "992dc0b1-f8ca-4507-a459-9e33e1982039",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "HideContextMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d4f79c9-f0e0-4eb6-ad71-a7a88e4c64c2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Build",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80c4fe9e-96a4-483a-82e5-9ca33a6543fd",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Build",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

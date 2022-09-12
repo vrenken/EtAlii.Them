@@ -66,7 +66,7 @@ namespace Game.Players
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ContextMenu"",
+                    ""name"": ""ShowContextMenu"",
                     ""type"": ""Button"",
                     ""id"": ""eaa0f460-1847-4bed-96b2-71ca9df02bc5"",
                     ""expectedControlType"": ""Button"",
@@ -259,7 +259,7 @@ namespace Game.Players
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""ContextMenu"",
+                    ""action"": ""ShowContextMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -270,7 +270,77 @@ namespace Game.Players
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""ContextMenu"",
+                    ""action"": ""ShowContextMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ContextMenu"",
+            ""id"": ""670b7562-0d4a-4648-bdce-93b706bd7bf0"",
+            ""actions"": [
+                {
+                    ""name"": ""HideContextMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b895088-93bb-437e-ad5a-06d33b5692fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Build"",
+                    ""type"": ""Button"",
+                    ""id"": ""6422a638-2efb-4492-b7f7-a9111084f4a3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""33ee8d5b-39bd-49ef-9e48-83873aae934f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""HideContextMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""992dc0b1-f8ca-4507-a459-9e33e1982039"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""HideContextMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d4f79c9-f0e0-4eb6-ad71-a7a88e4c64c2"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""Build"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""80c4fe9e-96a4-483a-82e5-9ca33a6543fd"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Build"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -333,7 +403,11 @@ namespace Game.Players
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
-            m_Player_ContextMenu = m_Player.FindAction("ContextMenu", throwIfNotFound: true);
+            m_Player_ShowContextMenu = m_Player.FindAction("ShowContextMenu", throwIfNotFound: true);
+            // ContextMenu
+            m_ContextMenu = asset.FindActionMap("ContextMenu", throwIfNotFound: true);
+            m_ContextMenu_HideContextMenu = m_ContextMenu.FindAction("HideContextMenu", throwIfNotFound: true);
+            m_ContextMenu_Build = m_ContextMenu.FindAction("Build", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -397,7 +471,7 @@ namespace Game.Players
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Jump;
         private readonly InputAction m_Player_Sprint;
-        private readonly InputAction m_Player_ContextMenu;
+        private readonly InputAction m_Player_ShowContextMenu;
         public struct PlayerActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -406,7 +480,7 @@ namespace Game.Players
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Jump => m_Wrapper.m_Player_Jump;
             public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
-            public InputAction @ContextMenu => m_Wrapper.m_Player_ContextMenu;
+            public InputAction @ShowContextMenu => m_Wrapper.m_Player_ShowContextMenu;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -428,9 +502,9 @@ namespace Game.Players
                     @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                     @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                     @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
-                    @ContextMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnContextMenu;
-                    @ContextMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnContextMenu;
-                    @ContextMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnContextMenu;
+                    @ShowContextMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShowContextMenu;
+                    @ShowContextMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShowContextMenu;
+                    @ShowContextMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShowContextMenu;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -447,13 +521,54 @@ namespace Game.Players
                     @Sprint.started += instance.OnSprint;
                     @Sprint.performed += instance.OnSprint;
                     @Sprint.canceled += instance.OnSprint;
-                    @ContextMenu.started += instance.OnContextMenu;
-                    @ContextMenu.performed += instance.OnContextMenu;
-                    @ContextMenu.canceled += instance.OnContextMenu;
+                    @ShowContextMenu.started += instance.OnShowContextMenu;
+                    @ShowContextMenu.performed += instance.OnShowContextMenu;
+                    @ShowContextMenu.canceled += instance.OnShowContextMenu;
                 }
             }
         }
         public PlayerActions @Player => new PlayerActions(this);
+
+        // ContextMenu
+        private readonly InputActionMap m_ContextMenu;
+        private IContextMenuActions m_ContextMenuActionsCallbackInterface;
+        private readonly InputAction m_ContextMenu_HideContextMenu;
+        private readonly InputAction m_ContextMenu_Build;
+        public struct ContextMenuActions
+        {
+            private @PlayerInputActions m_Wrapper;
+            public ContextMenuActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @HideContextMenu => m_Wrapper.m_ContextMenu_HideContextMenu;
+            public InputAction @Build => m_Wrapper.m_ContextMenu_Build;
+            public InputActionMap Get() { return m_Wrapper.m_ContextMenu; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(ContextMenuActions set) { return set.Get(); }
+            public void SetCallbacks(IContextMenuActions instance)
+            {
+                if (m_Wrapper.m_ContextMenuActionsCallbackInterface != null)
+                {
+                    @HideContextMenu.started -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnHideContextMenu;
+                    @HideContextMenu.performed -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnHideContextMenu;
+                    @HideContextMenu.canceled -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnHideContextMenu;
+                    @Build.started -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnBuild;
+                    @Build.performed -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnBuild;
+                    @Build.canceled -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnBuild;
+                }
+                m_Wrapper.m_ContextMenuActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @HideContextMenu.started += instance.OnHideContextMenu;
+                    @HideContextMenu.performed += instance.OnHideContextMenu;
+                    @HideContextMenu.canceled += instance.OnHideContextMenu;
+                    @Build.started += instance.OnBuild;
+                    @Build.performed += instance.OnBuild;
+                    @Build.canceled += instance.OnBuild;
+                }
+            }
+        }
+        public ContextMenuActions @ContextMenu => new ContextMenuActions(this);
         private int m_KeyboardMouseSchemeIndex = -1;
         public InputControlScheme KeyboardMouseScheme
         {
@@ -496,7 +611,12 @@ namespace Game.Players
             void OnLook(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
             void OnSprint(InputAction.CallbackContext context);
-            void OnContextMenu(InputAction.CallbackContext context);
+            void OnShowContextMenu(InputAction.CallbackContext context);
+        }
+        public interface IContextMenuActions
+        {
+            void OnHideContextMenu(InputAction.CallbackContext context);
+            void OnBuild(InputAction.CallbackContext context);
         }
     }
 }
