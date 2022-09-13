@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="ContextMenu" src="project://database/Assets/Game/Players/Overlay/ContextMenu/ContextMenu.uxml?fileID=9197481963319205126&amp;guid=690366576cc4c244a9af296a01d00a3e&amp;type=3#ContextMenu" />
+    <ui:Instance template="ContextMenu" name="ContextMenu" style="left: 50%; top: 50%; max-width: 40%; max-height: 40%; width: 40%; height: 40%; position: absolute; min-width: 40%; min-height: 40%;" />
+    <ui:VisualElement name="Screen" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%;" />
+</ui:UXML>
