@@ -37,8 +37,8 @@ namespace Game.Players
 
             overlaySource.ContextMenu.style.display = DisplayStyle.Flex;
 
-            SetPosition();
             SetMenuItems();
+            SetPosition();
             
             inputActionsSource.InputActions.Player.Disable();
             inputActionsSource.InputActions.ContextMenu.Enable();
@@ -65,23 +65,11 @@ namespace Game.Players
         }
         private void SetPosition()
         {
-            
-            var position = RuntimePanelUtils.CameraTransformWorldToPanel(overlaySource.Screen.panel, hexTileSelector.hexTile.transform.position, playerCamera);
-
-            //overlaySource.ContextMenu.transform.position = position;
-            var layout = overlaySource.ContextMenu.layout;
-            //overlaySource.ContextMenu.transform.position = position.WithNewX(position.x - layout.width / 2);
-
-            //overlaySource.ContextMenu.transform.position = position
-            //    .WithNewX(position.x - layout.size.x / 2);
-            
-            //
-            // var position = overlaySource.Screen.WorldToLocal(hexTileSelector.hexTile.transform.position);
-            // overlaySource.ContextMenu.style.left = position.x - overlaySource.ContextMenu.layout.width / 2f;
-            // overlaySource.ContextMenu.style.top = position.y - overlaySource.ContextMenu.layout.height / 2f;
-            //
-            // m_Bar.transform.position = newPosition.WithNewX(newPosition.x - 
-            //                                                 m_Bar.layout.width / 2);
+            // We want to focus on the upper face of the tile. This means adding an offset to aim for.
+            var worldPosition = hexTileSelector.hexTile.transform.position + Vector3.up;
+            var position = RuntimePanelUtils.CameraTransformWorldToPanel(overlaySource.Screen.panel, worldPosition, playerCamera);
+            overlaySource.ContextMenu.style.left = position.x - overlaySource.ContextMenuSize.x / 2f;
+            overlaySource.ContextMenu.style.top = position.y - overlaySource.ContextMenuSize.y / 2f;
         }
         
         private void OnHideContextMenu(InputAction.CallbackContext obj)
