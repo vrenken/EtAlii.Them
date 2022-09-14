@@ -290,6 +290,15 @@ namespace Game.Players
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Navigate"",
+                    ""type"": ""Value"",
+                    ""id"": ""87fada05-d5a0-419b-b191-f1209d948dc1"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""Build"",
                     ""type"": ""Button"",
                     ""id"": ""6422a638-2efb-4492-b7f7-a9111084f4a3"",
@@ -304,17 +313,6 @@ namespace Game.Players
                     ""name"": """",
                     ""id"": ""33ee8d5b-39bd-49ef-9e48-83873aae934f"",
                     ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""992dc0b1-f8ca-4507-a459-9e33e1982039"",
-                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
@@ -346,111 +344,111 @@ namespace Game.Players
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cedcfd2c-2261-422c-912f-73a476fd0ddd"",
+                    ""id"": ""9fdc28c3-c0fc-4e6c-b7fa-dc721d3ebe3c"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": ""StickDeadzone"",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""WASD"",
-                    ""id"": ""19d821fb-ac66-4db2-b830-788068248ec5"",
+                    ""id"": ""7cd76456-3df5-458e-a690-88ab31f450a6"",
                     ""path"": ""2DVector(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""2bc6030b-0e1e-49d0-bec3-83e469ae0479"",
+                    ""id"": ""129db116-da20-447b-9301-fd338c25f11f"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""4c336b2b-22fe-414d-b401-64570e4882a7"",
+                    ""id"": ""7c1b0fe8-e17d-4b4d-8fde-9bbd8448f179"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""1aae094e-4a21-4462-8f22-92885a0a45f3"",
+                    ""id"": ""10753cff-c330-42b4-ad5d-0f7a40312f26"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""e72bbcd6-9387-4b9f-a08d-2cc8361eecc8"",
+                    ""id"": ""c92f3b98-adc4-4795-98d4-22a31d2d8707"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""65aba6e1-252f-42d1-9ff7-3497e5bab86c"",
+                    ""id"": ""18d25b12-05d2-4c87-b795-cbc9a224b1af"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""9785c59e-5947-433b-829e-59d0e7d57459"",
+                    ""id"": ""0d9534a2-1742-4af1-a2a1-438fc881fcf5"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""d14959f3-da0b-4139-8a7e-7d7c0afbb5f2"",
+                    ""id"": ""9c5d1614-1180-48bc-afc7-6308add93011"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""72d01209-4f72-497c-b6c7-0fc29cd57d5d"",
+                    ""id"": ""568ee691-3bd8-4d97-8eef-e31bc1195017"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""HideContextMenu"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -517,6 +515,7 @@ namespace Game.Players
             // ContextMenu
             m_ContextMenu = asset.FindActionMap("ContextMenu", throwIfNotFound: true);
             m_ContextMenu_HideContextMenu = m_ContextMenu.FindAction("HideContextMenu", throwIfNotFound: true);
+            m_ContextMenu_Navigate = m_ContextMenu.FindAction("Navigate", throwIfNotFound: true);
             m_ContextMenu_Build = m_ContextMenu.FindAction("Build", throwIfNotFound: true);
         }
 
@@ -643,12 +642,14 @@ namespace Game.Players
         private readonly InputActionMap m_ContextMenu;
         private IContextMenuActions m_ContextMenuActionsCallbackInterface;
         private readonly InputAction m_ContextMenu_HideContextMenu;
+        private readonly InputAction m_ContextMenu_Navigate;
         private readonly InputAction m_ContextMenu_Build;
         public struct ContextMenuActions
         {
             private @PlayerInputActions m_Wrapper;
             public ContextMenuActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @HideContextMenu => m_Wrapper.m_ContextMenu_HideContextMenu;
+            public InputAction @Navigate => m_Wrapper.m_ContextMenu_Navigate;
             public InputAction @Build => m_Wrapper.m_ContextMenu_Build;
             public InputActionMap Get() { return m_Wrapper.m_ContextMenu; }
             public void Enable() { Get().Enable(); }
@@ -662,6 +663,9 @@ namespace Game.Players
                     @HideContextMenu.started -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnHideContextMenu;
                     @HideContextMenu.performed -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnHideContextMenu;
                     @HideContextMenu.canceled -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnHideContextMenu;
+                    @Navigate.started -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnNavigate;
+                    @Navigate.performed -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnNavigate;
+                    @Navigate.canceled -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnNavigate;
                     @Build.started -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnBuild;
                     @Build.performed -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnBuild;
                     @Build.canceled -= m_Wrapper.m_ContextMenuActionsCallbackInterface.OnBuild;
@@ -672,6 +676,9 @@ namespace Game.Players
                     @HideContextMenu.started += instance.OnHideContextMenu;
                     @HideContextMenu.performed += instance.OnHideContextMenu;
                     @HideContextMenu.canceled += instance.OnHideContextMenu;
+                    @Navigate.started += instance.OnNavigate;
+                    @Navigate.performed += instance.OnNavigate;
+                    @Navigate.canceled += instance.OnNavigate;
                     @Build.started += instance.OnBuild;
                     @Build.performed += instance.OnBuild;
                     @Build.canceled += instance.OnBuild;
@@ -726,6 +733,7 @@ namespace Game.Players
         public interface IContextMenuActions
         {
             void OnHideContextMenu(InputAction.CallbackContext context);
+            void OnNavigate(InputAction.CallbackContext context);
             void OnBuild(InputAction.CallbackContext context);
         }
     }

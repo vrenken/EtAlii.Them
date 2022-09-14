@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Game/Players/Overlay/ContextMenu/ContextMenu.uss?fileID=7433441132597879392&amp;guid=ba373f522ae8d5e4487c623e28da7620&amp;type=3#ContextMenu" />
     <ui:VisualElement name="Pivot" style="left: 50%; top: 50%; right: 50%; bottom: 50%; width: 1px; height: 1px; rotate: 360deg;">
-        <ui:VisualElement name="Icon" style="top: 50px; width: 50px; height: 50px; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; left: -25px;" />
+        <ui:VisualElement name="Icon" style="top: 50px; width: 50px; height: 50px; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; left: -25px; background-color: rgba(255, 0, 0, 255);" />
     </ui:VisualElement>
 </ui:UXML>
