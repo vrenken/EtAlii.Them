@@ -1,12 +1,17 @@
 namespace Game.Players
 {
     using UnityEngine.InputSystem;
-    using UnityEngine;
     using UnityEngine.UIElements;
     using DG.Tweening;
 
     public partial class ContextMenu
     {
+        private const float SmallScale = 0.7f;
+        private const float LargeScale = 1.0f;
+        private const float SmallOpacity = 0.1f;
+        private const float LargeOpacity = 1.0f;
+        private const float ZoomDuration = 0.15f;
+        
         private void OnShowContextMenu(InputAction.CallbackContext context)
         {
             if (hexTileSelector.hexTile == null) return;
@@ -19,11 +24,11 @@ namespace Game.Players
             overlaySource.ContextMenu.style.display = DisplayStyle.Flex;
 
             _canNavigate = false;
-            var startScale = 0.1f;
-            var endScale = 1.0f;
-            overlaySource.ContextMenu.style.scale = new StyleScale(new Scale(Vector3.one * startScale));
             overlaySource.ContextMenu
-                .DOScale(endScale, 0.25f)
+                .DoFade(SmallOpacity, LargeOpacity, ZoomDuration)
+                .SetEase(Ease.Linear);
+            overlaySource.ContextMenu
+                .DOScale(SmallScale, LargeScale, ZoomDuration)
                 .SetEase(Ease.OutCubic)
                 .OnComplete(() =>
                 {
@@ -38,11 +43,11 @@ namespace Game.Players
             
             _canNavigate = false;
             
-            var startScale = 1.0f; 
-            overlaySource.ContextMenu.style.scale = new StyleScale(new Scale(Vector3.one * startScale));
-            var endScale = 0.1f;
             overlaySource.ContextMenu
-                .DOScale(endScale, 0.25f)
+                .DoFade(LargeOpacity, SmallOpacity, ZoomDuration)
+                .SetEase(Ease.Linear);
+            overlaySource.ContextMenu
+                .DOScale(LargeScale, SmallScale, ZoomDuration)
                 .SetEase(Ease.OutCubic)
                 .OnComplete(() =>
                 {
@@ -51,6 +56,5 @@ namespace Game.Players
                     _canNavigate = true;
                 });
         }
-
     }
 }

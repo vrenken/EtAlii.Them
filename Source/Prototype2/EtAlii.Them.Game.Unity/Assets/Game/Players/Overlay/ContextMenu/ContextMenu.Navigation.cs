@@ -1,7 +1,6 @@
 namespace Game.Players
 {
     using System;
-    using System.Linq;
     using UnityEngine.UIElements;
     using DG.Tweening;
     using UnityEngine;
@@ -9,6 +8,11 @@ namespace Game.Players
 
     public partial class ContextMenu
     {
+        private int _rotation;
+
+        private const float RotationDuration = 0.35f;
+        private const float IconRotationDuration = 0.175f;
+        
         private void OnNavigateContextMenu(InputAction.CallbackContext context)
         {
             if (!_canNavigate)
@@ -21,42 +25,47 @@ namespace Game.Players
             if (Math.Abs(direction.x + 1f) < Tolerance && direction.y == 0)
             {
                 // Left
+                _canNavigate = true;
             }
             else if (Math.Abs(direction.x - 1f) < Tolerance && direction.y == 0)
             {
                 // Right
+                _canNavigate = true;
             }
             else if (Math.Abs(direction.y + 1f) < Tolerance && direction.x == 0)
             {
                 // Up
-                Rotate(60f);
+                Rotate(+1);
             }
             else if (Math.Abs(direction.y - 1f) < Tolerance && direction.x == 0)
             {
                 // Down
-                Rotate(-60f);
+                Rotate(-1);
             }
         }
-        private void Rotate(float degrees)
+        private void Rotate(int rotation)
         {
+            var currentRotation = _rotation * 60 + 30;
+            _rotation += rotation;
+            var newRotation = _rotation * 60 + 30; 
+
             // Rotate the menu.
-            var menuEndRotation = overlaySource.ContextMenu.style.rotate.value.angle.value + degrees;
             overlaySource.ContextMenu
-                .DoRotate(menuEndRotation, 0.5f)
+                .Query("Rotation")
+                .First()
+                .DoRotate(currentRotation, newRotation, RotationDuration)
                 .SetEase(Ease.OutCubic)
                 .OnComplete(() => _canNavigate = true);
             
             // And rotate the icons, but in the opposite direction.
-            var menuIcons = overlaySource.ContextMenu
-                .Query("ContextMenuItem")
-                .ToList()
-                .Select(i => i.Query("Icon").First())
-                .ToArray();
-            foreach (var menuIcon in menuIcons)
+            foreach (var item in items)
             {
-                var endRotation = menuIcon.style.rotate.value.angle.value - degrees;
-                menuIcon
-                    .DoRotate(endRotation, 0.25f)
+                var iconElement = item.iconElement;
+                currentRotation = -90 - item.rotation * 60;
+                item.rotation += rotation;
+                newRotation = -90 - item.rotation * 60;
+                iconElement
+                    .DoRotate(currentRotation, newRotation, IconRotationDuration)
                     .SetEase(Ease.Linear);
             }
         }
