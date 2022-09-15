@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// ReSharper disable All
+using UnityEngine;
 
 #if false || EPO_DOTWEEN // MODULE_MARKER
 

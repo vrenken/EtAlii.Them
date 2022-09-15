@@ -1,4 +1,5 @@
-﻿// Author: Daniele Giardini - http://www.demigiant.com
+﻿// ReSharper disable All
+// Author: Daniele Giardini - http://www.demigiant.com
 // Created: 2018/07/13
 
 using System;
@@ -8,6 +9,8 @@ using DG.Tweening.Plugins.Options;
 //#if UNITY_2018_1_OR_NEWER && (NET_4_6 || NET_STANDARD_2_0)
 //using Task = System.Threading.Tasks.Task;
 //#endif
+// ReSharper disable All
+// ReSharper disable All
 
 #pragma warning disable 1591
 namespace DG.Tweening
@@ -26,6 +29,7 @@ namespace DG.Tweening
         /// <summary>Tweens a Material's color using the given gradient
         /// (NOTE 1: only uses the colors of the gradient, not the alphas - NOTE 2: creates a Sequence, not a Tweener).
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="target"></param>
         /// <param name="gradient">The gradient to use</param><param name="duration">The duration of the tween</param>
         public static Sequence DOGradientColor(this Material target, Gradient gradient, float duration)
         {
@@ -46,9 +50,11 @@ namespace DG.Tweening
             s.SetTarget(target);
             return s;
         }
+
         /// <summary>Tweens a Material's named color property using the given gradient
         /// (NOTE 1: only uses the colors of the gradient, not the alphas - NOTE 2: creates a Sequence, not a Tweener).
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="target"></param>
         /// <param name="gradient">The gradient to use</param>
         /// <param name="property">The name of the material property to tween (like _Tint or _SpecColor)</param>
         /// <param name="duration">The duration of the tween</param>
@@ -129,7 +135,9 @@ namespace DG.Tweening
         /// It can be used inside a coroutine as a yield.
         /// <para>Example usage:</para><code>yield return myTween.WaitForElapsedLoops(2);</code>
         /// </summary>
+        /// <param name="t"></param>
         /// <param name="elapsedLoops">Elapsed loops to wait for</param>
+        /// <param name="returnCustomYieldInstruction"></param>
         public static CustomYieldInstruction WaitForElapsedLoops(this Tween t, int elapsedLoops, bool returnCustomYieldInstruction)
         {
             if (!t.active) {
@@ -145,7 +153,9 @@ namespace DG.Tweening
         /// It can be used inside a coroutine as a yield.
         /// <para>Example usage:</para><code>yield return myTween.WaitForPosition(2.5f);</code>
         /// </summary>
+        /// <param name="t"></param>
         /// <param name="position">Position (loops included, delays excluded) to wait for</param>
+        /// <param name="returnCustomYieldInstruction"></param>
         public static CustomYieldInstruction WaitForPosition(this Tween t, float position, bool returnCustomYieldInstruction)
         {
             if (!t.active) {
@@ -182,6 +192,7 @@ namespace DG.Tweening
 
         /// <summary>Tweens a Material's named texture offset property with the given ID to the given value.
         /// Also stores the material as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="target"></param>
         /// <param name="endValue">The end value to reach</param>
         /// <param name="propertyID">The ID of the material property to tween (also called nameID in Unity's manual)</param>
         /// <param name="duration">The duration of the tween</param>
@@ -198,6 +209,7 @@ namespace DG.Tweening
 
         /// <summary>Tweens a Material's named texture scale property with the given ID to the given value.
         /// Also stores the material as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="target"></param>
         /// <param name="endValue">The end value to reach</param>
         /// <param name="propertyID">The ID of the material property to tween (also called nameID in Unity's manual)</param>
         /// <param name="duration">The duration of the tween</param>
@@ -267,6 +279,7 @@ namespace DG.Tweening
         /// It can be used inside an async operation.
         /// <para>Example usage:</para><code>await myTween.AsyncWaitForElapsedLoops();</code>
         /// </summary>
+        /// <param name="t"></param>
         /// <param name="elapsedLoops">Elapsed loops to wait for</param>
         public static async System.Threading.Tasks.Task AsyncWaitForElapsedLoops(this Tween t, int elapsedLoops)
         {
@@ -283,6 +296,7 @@ namespace DG.Tweening
         /// It can be used inside an async operation.
         /// <para>Example usage:</para><code>await myTween.AsyncWaitForPosition();</code>
         /// </summary>
+        /// <param name="t"></param>
         /// <param name="position">Position (loops included, delays excluded) to wait for</param>
         public static async System.Threading.Tasks.Task AsyncWaitForPosition(this Tween t, float position)
         {

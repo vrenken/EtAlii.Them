@@ -7,6 +7,7 @@ using UnityEngine;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Core.PathCore;
 using DG.Tweening.Plugins.Options;
+// ReSharper disable All
 
 #pragma warning disable 1591
 namespace DG.Tweening
