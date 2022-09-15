@@ -1,10 +1,12 @@
 namespace Game.Players
 {
+    using System;
     using UnityEngine;
     using UnityEngine.UIElements;
 
     public partial class ContextMenu
     {
+        private const int SelectionPosition = 3;
         private void SetMenuItems()
         {
             var menuItems = overlaySource.ContextMenu
@@ -27,6 +29,9 @@ namespace Game.Players
             item.iconElement.style.backgroundImage = new StyleBackground(item.icon);
             item.iconElement.style.backgroundColor = new StyleColor(); // Let's clear the development color.
             item.iconElement.style.rotate = new StyleRotate(new Rotate(currentRotation));
+            item.isSelected = Math.Abs(item.rotation) % 6 % 6 == SelectionPosition;
+            var color = item.isSelected ? Color.yellow : Color.white;
+            item.iconElement.style.unityBackgroundImageTintColor = new StyleColor(color);
         }
         private void SetPosition()
         {

@@ -67,6 +67,11 @@ namespace Game.Players
                 iconElement
                     .DoRotate(currentRotation, newRotation, IconRotationDuration)
                     .SetEase(Ease.Linear);
+                item.isSelected = Math.Abs(item.rotation) % 6 == SelectionPosition;
+                var color = item.isSelected ? Color.yellow : Color.white;
+                iconElement
+                    .DoColor(color, RotationDuration)
+                    .SetEase(Ease.Linear);
             }
         }
     }

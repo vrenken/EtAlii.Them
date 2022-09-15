@@ -104,6 +104,32 @@ namespace Game.Players
             t.SetTarget(target);
             return t;
         }
+
+        /// <summary>Tweens a VisualElement's backgroundTintColor to the given value.
+        /// Also stores the VisualElement as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="target"></param>
+        /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
+        public static TweenerCore<Color, Color, ColorOptions> DoColor(this VisualElement target, Color endValue, float duration)
+        {
+            TweenerCore<Color, Color, ColorOptions> t = DOTween.To(() => target.style.unityBackgroundImageTintColor.value, x => target.style.unityBackgroundImageTintColor = new StyleColor(x), endValue, duration);
+            t.SetTarget(target);
+            return t;
+        }
+
+        /// <summary>Tweens a VisualElement's backgroundTintColor to the given value.
+        /// Also stores the VisualElement as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="target"></param>
+        /// <param name="beginValue"></param>
+        /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
+        public static TweenerCore<Color, Color, ColorOptions> DoColor(this VisualElement target, Color beginValue, Color endValue, float duration)
+        {
+            target.style.unityBackgroundImageTintColor = new StyleColor(beginValue);
+
+            TweenerCore<Color, Color, ColorOptions> t = DOTween.To(() => target.style.unityBackgroundImageTintColor.value, x => target.style.unityBackgroundImageTintColor = new StyleColor(x), endValue, duration);
+            t.SetTarget(target);
+            return t;
+        }
+
     }
 }
 
