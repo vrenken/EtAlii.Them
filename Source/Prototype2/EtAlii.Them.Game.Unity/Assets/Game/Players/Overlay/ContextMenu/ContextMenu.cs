@@ -45,9 +45,10 @@ namespace Game.Players
                 .SingleOrDefault();
             if (action != null)
             {
-                if (action.IsValid(tile, out var _))
+                var grid = hexTileSelector.hexGrid;
+                if (action.IsValid(tile, grid, out var _, out var preparations))
                 {
-                    action.Invoke(tile, hexTileSelector.hexGrid);
+                    action.Invoke(tile, grid, preparations);
                 }
             }
 

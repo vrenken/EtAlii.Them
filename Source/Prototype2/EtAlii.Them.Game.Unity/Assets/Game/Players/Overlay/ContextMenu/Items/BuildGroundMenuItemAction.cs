@@ -7,8 +7,9 @@ namespace Game.Players
     {
         public HexTile groundTilePrefab;
 
-        public override bool IsValid(HexTile tile, out int priority)
+        public override bool IsValid(HexTile tile, HexGrid grid, out int priority, out object preparations)
         {
+            preparations = null;
             priority = 100;
             return tile.type switch
             {
@@ -18,7 +19,7 @@ namespace Game.Players
             };
         }
 
-        public override void Invoke(HexTile tile, HexGrid grid)
+        public override void Invoke(HexTile tile, HexGrid grid, object preparations)
         {
             var coordinates = tile.HexCoordinates;
 
