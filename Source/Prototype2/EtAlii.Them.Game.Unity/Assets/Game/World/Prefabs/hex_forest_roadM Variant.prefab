@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1820430535175919719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862757653615303090}
+  m_Layer: 0
+  m_Name: Props
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &862757653615303090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820430535175919719}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2413951283181958518}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2741190903717024413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,6 +100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bce9452acd567148bee3a9fe08954c2, type: 3}
+--- !u!4 &2413951283181958518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0bce9452acd567148bee3a9fe08954c2, type: 3}
+  m_PrefabInstance: {fileID: 2741190903717024413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3083773099332136908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0bce9452acd567148bee3a9fe08954c2, type: 3}
@@ -86,6 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955e14b1ab1f4218ae6d6c03f5f555ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 3
+  props: {fileID: 1820430535175919719}
 --- !u!114 &-7132634272581328920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69cfbd3de06cad4eb3b2e8fe41a5326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_tesseraSerializationVersion: 1
   palette: {fileID: 0}
   faceDetails:
   - offset: {x: 0, y: 0, z: 0}
@@ -276,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
+  isInvisible: 0
   isGlowing: 0
 --- !u!114 &2264353874442414102
 MonoBehaviour:

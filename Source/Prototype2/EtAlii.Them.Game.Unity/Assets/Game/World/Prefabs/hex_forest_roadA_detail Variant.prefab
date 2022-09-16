@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &29304335878769931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022063278080675559}
+  m_Layer: 0
+  m_Name: Props
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022063278080675559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29304335878769931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3937961391276059915}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3543429623923280608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,6 +100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2847f67ebd6640469ebe8e7be4a9824, type: 3}
+--- !u!4 &3937961391276059915 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2847f67ebd6640469ebe8e7be4a9824, type: 3}
+  m_PrefabInstance: {fileID: 3543429623923280608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4462402756074158001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2847f67ebd6640469ebe8e7be4a9824, type: 3}
@@ -111,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69cfbd3de06cad4eb3b2e8fe41a5326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_tesseraSerializationVersion: 1
   palette: {fileID: 0}
   faceDetails:
   - offset: {x: 0, y: 0, z: 0}
@@ -275,6 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955e14b1ab1f4218ae6d6c03f5f555ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 3
+  props: {fileID: 29304335878769931}
 --- !u!114 &5829267763457937640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,4 +325,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowMaterial: {fileID: 2100000, guid: 067895e9763975e4fa2528c9a359a523, type: 2}
+  isInvisible: 0
   isGlowing: 0

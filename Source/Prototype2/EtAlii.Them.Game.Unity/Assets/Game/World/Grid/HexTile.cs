@@ -8,6 +8,10 @@ namespace Game.World
         private HexCoordinates hexCoordinates;
         private GlowHighlight highlight;
 
+        public TileType type;
+
+        public GameObject props;
+        
         public HexTile Clone(HexTile tilePrefab)
         {
             var sourceTileTransform = transform;
