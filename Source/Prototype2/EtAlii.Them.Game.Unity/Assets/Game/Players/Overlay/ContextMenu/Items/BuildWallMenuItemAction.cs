@@ -12,6 +12,8 @@ namespace Game.Players
         public BuildingProp closedGateWallPropPrefab;
         public BuildingProp hexCornerWallAPropPrefab;
         public BuildingProp hexCornerWallBPropPrefab;
+        public BuildingProp singleWallPropPrefab;
+        public BuildingProp endWallPropPrefab;
 
         public override bool IsValid(HexTile tile, out int priority)
         {

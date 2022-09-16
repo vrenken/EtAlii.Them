@@ -18,3 +18,5 @@ MonoBehaviour:
   closedGateWallPropPrefab: {fileID: 4579641718275734586, guid: 8b35a693a496ec34b93ce8697ee478e6, type: 3}
   hexCornerWallAPropPrefab: {fileID: 3323649467672071372, guid: b9a944e9401867a43900e03fe8e99360, type: 3}
   hexCornerWallBPropPrefab: {fileID: -2842523350817916285, guid: 207e0d498996f0c4cbabef8d90af7efc, type: 3}
+  singleWallPropPrefab: {fileID: 2482355200616977284, guid: b85e13033ffd7c94381a72d9d4c07403, type: 3}
+  endWallPropPrefab: {fileID: -4393896347325292418, guid: 86a572de111d1b744b45632729a83a30, type: 3}
