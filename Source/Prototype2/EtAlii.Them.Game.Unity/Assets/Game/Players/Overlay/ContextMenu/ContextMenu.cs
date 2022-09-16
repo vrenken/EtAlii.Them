@@ -1,6 +1,6 @@
 namespace Game.Players
 {
-    using Game.World;
+    using System.Linq;
     using UnityEngine.InputSystem;
     using UnityEngine;
 
@@ -9,8 +9,6 @@ namespace Game.Players
         public Camera playerCamera;
         public HexTileSelector hexTileSelector;
         public OverlaySource overlaySource;
-
-        public HexTile tilePrefab;
 
         public InputActionsSource inputActionsSource;
 
@@ -38,11 +36,20 @@ namespace Game.Players
 
         private void OnBuild(InputAction.CallbackContext obj)
         {
-            if (hexTileSelector.hexTile == null) return;
-            
-            var coordinates = hexTileSelector.hexTile.HexCoordinates;
+            var tile = hexTileSelector.hexTile;
+            if (tile == null) return;
 
-            hexTileSelector.hexGrid.ReplaceTile(coordinates, tilePrefab);
+            var action = items
+                .Where(i => i.isSelected)
+                .Select(i => i.action)
+                .SingleOrDefault();
+            if (action != null)
+            {
+                if (action.IsValid(tile, out var _))
+                {
+                    action.Invoke(tile, hexTileSelector.hexGrid);
+                }
+            }
 
             OnHideContextMenu(obj);
         }

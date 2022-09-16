@@ -3,7 +3,8 @@
     "rootNamespace": "Game.Players",
     "references": [
         "Unity.InputSystem",
-        "Game.World"
+        "Game.World",
+        "Game.Buildings"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

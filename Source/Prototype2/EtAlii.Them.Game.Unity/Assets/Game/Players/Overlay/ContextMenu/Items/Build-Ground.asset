@@ -17,3 +17,4 @@ MonoBehaviour:
   title: Ground
   isSelected: 0
   children: []
+  action: {fileID: 11400000, guid: 4ff2ad567d925c244bb29e95853db02f, type: 2}

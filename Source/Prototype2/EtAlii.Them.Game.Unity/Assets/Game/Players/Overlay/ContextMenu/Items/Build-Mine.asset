@@ -17,3 +17,4 @@ MonoBehaviour:
   title: Mine
   isSelected: 0
   children: []
+  action: {fileID: 11400000, guid: d00d5dea49e898c44bed70d447476e7d, type: 2}

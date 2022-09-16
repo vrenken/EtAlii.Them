@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0785ebd28acb4974a60c89923855799c, type: 3}
+  m_Name: BuildWallMenuItemAction
+  m_EditorClassIdentifier: 
+  straightWallPropPrefab: {fileID: -7930927998076254801, guid: baede75018cc4504ab4074745d8da083, type: 3}
+  cornerWallPropPrefab: {fileID: 3696081424439257584, guid: 0a910dc5eb700164ea5238fe4618621e, type: 3}
+  gateWallPropPrefab: {fileID: -2077381769875276809, guid: d43dab3e4297eaa448b1e41e15ec04a6, type: 3}
+  closedGateWallPropPrefab: {fileID: 4579641718275734586, guid: 8b35a693a496ec34b93ce8697ee478e6, type: 3}
+  hexCornerWallAPropPrefab: {fileID: 3323649467672071372, guid: b9a944e9401867a43900e03fe8e99360, type: 3}
+  hexCornerWallBPropPrefab: {fileID: -2842523350817916285, guid: 207e0d498996f0c4cbabef8d90af7efc, type: 3}

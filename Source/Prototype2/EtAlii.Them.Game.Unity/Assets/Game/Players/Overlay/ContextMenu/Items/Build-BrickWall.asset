@@ -17,3 +17,4 @@ MonoBehaviour:
   title: Wall
   isSelected: 0
   children: []
+  action: {fileID: 11400000, guid: e79757605d907b243aa2ce4b236368e6, type: 2}

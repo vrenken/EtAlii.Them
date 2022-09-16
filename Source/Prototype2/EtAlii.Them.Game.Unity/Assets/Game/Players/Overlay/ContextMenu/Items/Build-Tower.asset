@@ -17,3 +17,4 @@ MonoBehaviour:
   title: Tower
   isSelected: 0
   children: []
+  action: {fileID: 11400000, guid: bd1bc45132a471d47bb7a937ed9e92fe, type: 2}

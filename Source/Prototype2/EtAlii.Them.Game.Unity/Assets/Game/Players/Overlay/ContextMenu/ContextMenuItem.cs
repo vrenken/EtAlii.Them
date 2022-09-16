@@ -11,7 +11,7 @@ namespace Game.Players
     /// Right bottom = 4
     /// Left bottom = 5
     /// </summary>
-    [CreateAssetMenu(menuName = "Them/ContextMenuItem")]
+    [CreateAssetMenu(menuName = "Them/ContextMenu/Item")]
     public class ContextMenuItem : ScriptableObject
     {
         public VectorImage icon;
@@ -20,5 +20,7 @@ namespace Game.Players
         public bool isSelected;
         public ContextMenuItem[] children;
         public VisualElement iconElement;
+
+        public MenuItemAction action;
     }
 }
