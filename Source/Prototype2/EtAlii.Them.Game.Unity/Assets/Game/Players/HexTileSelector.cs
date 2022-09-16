@@ -81,7 +81,7 @@ namespace Game.Players
         private bool FindTarget(out HexTile result)
         {
             
-            var characterPosition = character.transform.position + Vector3.up;
+            var characterPosition = character.transform.position + Vector3.up / 2f;
             var ray = new Ray(characterPosition, Vector3.down);
             if (Physics.Raycast(ray, out var hit, selectionMask))
             {
