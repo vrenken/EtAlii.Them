@@ -89,6 +89,28 @@ namespace Game.Players
                 (HexDirection.East, HexDirection.West) => (straightWallPropPrefab, 0),
                 (HexDirection.NorthLeft, HexDirection.SouthRight) => (straightWallPropPrefab, 60),
                 (HexDirection.NorthRight, HexDirection.SouthLeft) => (straightWallPropPrefab, 120),
+
+                // (HexDirection.West, HexDirection.NorthLeft) => (hexCornerWallBPropPrefab, 0),
+                // (HexDirection.NorthLeft, HexDirection.NorthRight) => (hexCornerWallBPropPrefab, 60),
+                // (HexDirection.NorthRight, HexDirection.East) => (hexCornerWallBPropPrefab, 120),
+                // (HexDirection.East, HexDirection.SouthRight) => (hexCornerWallBPropPrefab, 180),
+                // (HexDirection.SouthRight, HexDirection.SouthLeft) => (hexCornerWallBPropPrefab, 240),
+                // (HexDirection.SouthLeft, HexDirection.West) => (hexCornerWallBPropPrefab, 300),
+
+                (HexDirection.West, HexDirection.NorthRight) => (hexCornerWallAPropPrefab, 0),
+                (HexDirection.NorthLeft, HexDirection.East) => (hexCornerWallAPropPrefab, 60),
+                (HexDirection.NorthRight, HexDirection.SouthRight) => (hexCornerWallAPropPrefab, 120),
+                (HexDirection.East, HexDirection.SouthLeft) => (hexCornerWallAPropPrefab, 180),
+                (HexDirection.SouthRight, HexDirection.West) => (hexCornerWallAPropPrefab, 240),
+                (HexDirection.SouthLeft, HexDirection.NorthLeft) => (hexCornerWallAPropPrefab, 300),
+
+                (HexDirection.NorthRight, HexDirection.West) => (hexCornerWallAPropPrefab, 0),
+                (HexDirection.East, HexDirection.NorthLeft) => (hexCornerWallAPropPrefab, 60),
+                (HexDirection.SouthRight, HexDirection.NorthRight) => (hexCornerWallAPropPrefab, 120),
+                (HexDirection.SouthLeft, HexDirection.East) => (hexCornerWallAPropPrefab, 180),
+                (HexDirection.West, HexDirection.SouthRight) => (hexCornerWallAPropPrefab, 240),
+                (HexDirection.NorthLeft, HexDirection.SouthLeft) => (hexCornerWallAPropPrefab, 300),
+
                 _ => throw new NotSupportedException("Invalid wall prefab")
             };         
             
