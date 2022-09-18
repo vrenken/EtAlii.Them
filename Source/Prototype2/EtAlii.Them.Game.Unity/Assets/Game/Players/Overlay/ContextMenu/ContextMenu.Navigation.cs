@@ -58,7 +58,7 @@ namespace Game.Players
                 .OnComplete(() => _canNavigate = true);
             
             // And rotate the icons, but in the opposite direction.
-            foreach (var item in items)
+            foreach (var item in _activeItems)
             {
                 var iconElement = item.iconElement;
                 currentRotation = -90 - item.rotation * 60;

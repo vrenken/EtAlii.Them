@@ -15,6 +15,8 @@ namespace Game.Players
         public LayerMask selectionMask;
 
         public float offsetMargin = 0.2f;
+
+        public ContextMenu contextMenu;
         
         /// <summary>
         /// The update interval (in seconds).
@@ -50,7 +52,11 @@ namespace Game.Players
                 UpdateHexTile();
                 if (hexTile != null)
                 {
-                    hexTile.EnableHighlight();
+                    contextMenu.Prepare(hexTile, out var canBeUsed);
+                    if (canBeUsed)
+                    {
+                        hexTile.EnableHighlight();
+                    }
                 }
             }
         }

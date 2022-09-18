@@ -1,6 +1,7 @@
 namespace Game.Players
 {
     using System.Linq;
+    using Game.World;
     using UnityEngine.InputSystem;
     using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace Game.Players
         public InputActionsSource inputActionsSource;
 
         public ContextMenuItem[] items;
+        private ContextMenuItem[] _activeItems;
         private const double Tolerance = 0.00001f;
 
         private bool _canNavigate = true;
@@ -33,13 +35,23 @@ namespace Game.Players
             inputActionsSource.InputActions.ContextMenu.Build.performed -= OnBuild;
         }
 
+        public void Prepare(HexTile tile, out bool canBeUsed)
+        {
+            var grid = hexTileSelector.hexGrid;
+
+            _activeItems = items
+                .Where(i => i.action != null && i.action.IsValid(grid, tile, out var _, out var _))
+                .ToArray();
+            
+            canBeUsed = _activeItems.Any();
+        }
 
         private void OnBuild(InputAction.CallbackContext obj)
         {
             var tile = hexTileSelector.hexTile;
             if (tile == null) return;
 
-            var action = items
+            var action = _activeItems
                 .Where(i => i.isSelected)
                 .Select(i => i.action)
                 .SingleOrDefault();

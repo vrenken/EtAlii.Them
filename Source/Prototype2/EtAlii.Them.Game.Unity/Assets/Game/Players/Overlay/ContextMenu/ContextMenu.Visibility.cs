@@ -1,5 +1,6 @@
 namespace Game.Players
 {
+    using System.Linq;
     using UnityEngine.InputSystem;
     using UnityEngine.UIElements;
     using DG.Tweening;
@@ -15,6 +16,7 @@ namespace Game.Players
         private void OnShowContextMenu(InputAction.CallbackContext context)
         {
             if (hexTileSelector.hexTile == null) return;
+            if (!_activeItems.Any()) return;
             
             SetMenuItems();
             SetPosition();

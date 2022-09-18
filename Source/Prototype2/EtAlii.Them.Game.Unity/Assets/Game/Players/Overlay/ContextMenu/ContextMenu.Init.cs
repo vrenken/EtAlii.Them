@@ -15,15 +15,23 @@ namespace Game.Players
                 .ToArray();
             for (var i = 0; i < menuItems.Length; i++)
             {
-                var iconElement = menuItems[i].Query("Icon").First();
-                items[i].iconElement = iconElement;
-                SetIcon(i);
+                if (i < _activeItems.Length)
+                {
+                    var iconElement = menuItems[i].Query("Icon").First();
+                    _activeItems[i].iconElement = iconElement;
+                    SetIcon(i);
+                    menuItems[i].style.visibility = new StyleEnum<Visibility>(Visibility.Visible);
+                }
+                else
+                {
+                    menuItems[i].style.visibility = new StyleEnum<Visibility>(Visibility.Hidden);
+                }
             }
         }
 
         private void SetIcon(int index)
         {
-            var item = items[index];
+            var item = _activeItems[index];
             item.rotation = _rotation + index;
             var currentRotation = -90 - item.rotation * 60;
             item.iconElement.style.backgroundImage = new StyleBackground(item.icon);
