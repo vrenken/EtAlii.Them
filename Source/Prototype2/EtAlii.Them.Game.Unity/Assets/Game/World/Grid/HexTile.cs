@@ -27,6 +27,14 @@ namespace Game.World
         {
             hexCoordinates = GetComponent<HexCoordinates>();
             highlight = GetComponent<GlowHighlight>();
+            
+#if UNITY_EDITOR
+            var components = GetComponents<HexTile>();
+            if (components.Length != 1)
+            {
+                Debug.LogError($"GameObject {name} has more than one {nameof(HexTile)}");
+            }
+#endif
         }
 
         public void EnableHighlight() => highlight.ToggleGlow(true);

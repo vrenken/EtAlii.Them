@@ -10,6 +10,14 @@ namespace Game.World
         private void Awake()
         {
             hexCoordinates = GetComponent<HexCoordinates>();
+
+#if UNITY_EDITOR
+            var components = GetComponents<HexDebug>();
+            if (components.Length != 1)
+            {
+                Debug.LogError($"GameObject {name} has more than one {nameof(HexDebug)}");
+            }
+#endif
         }
         
         void OnDrawGizmos()

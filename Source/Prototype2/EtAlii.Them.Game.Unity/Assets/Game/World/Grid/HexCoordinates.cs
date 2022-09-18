@@ -15,6 +15,14 @@ namespace Game.World
         private void Awake()
         {
             offsetCoordinates = ConvertPositionToOffset(transform.position);
+            
+#if UNITY_EDITOR
+            var components = GetComponents<HexCoordinates>();
+            if (components.Length != 1)
+            {
+                Debug.LogError($"GameObject {name} has more than one {nameof(HexCoordinates)}");
+            }
+#endif
         }
 
         private Vector3Int ConvertPositionToOffset(Vector3 position)
