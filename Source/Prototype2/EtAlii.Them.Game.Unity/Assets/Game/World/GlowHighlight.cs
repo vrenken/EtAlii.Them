@@ -1,6 +1,7 @@
 namespace Game.World
 {
     using System.Collections.Generic;
+    using System.Linq;
     using UnityEngine;
 
     [RequireComponent(typeof(MeshRenderer))]
@@ -22,11 +23,21 @@ namespace Game.World
             _meshRenderer = GetComponent<MeshRenderer>();
             
             PrepareMaterials();
+            
+#if UNITY_EDITOR
+            var components = GetComponents<GlowHighlight>();
+            if (components.Length != 1)
+            {
+                Debug.LogError($"GameObject {name} has more than one {nameof(GlowHighlight)}");
+            }
+#endif
         }
 
         private void PrepareMaterials()
         {
-            foreach (var childRenderer in GetComponentsInChildren<Renderer>())
+            var childRenderers = GetComponentsInChildren<Renderer>()
+                .ToArray();
+            foreach (var childRenderer in childRenderers)
             {
                 var originalMaterials = childRenderer.materials;
                 _defaultMaterials.Add(childRenderer, originalMaterials);
@@ -63,12 +74,12 @@ namespace Game.World
         {
             if (isGlowing)
             {
-                if (isInvisible)
-                {
-                    _meshRenderer.enabled = false;
-                }
                 foreach (var kvp in _defaultMaterials)
                 {
+                    if (kvp.Key.gameObject.CompareTag(Tags.OnlyShowWhenGlowing))
+                    {
+                        kvp.Key.enabled = false;
+                    }
                     kvp.Key.materials = kvp.Value;
                 }
             }
@@ -77,10 +88,10 @@ namespace Game.World
                 foreach (var kvp in _glowMaterials)
                 {
                     kvp.Key.materials = kvp.Value;
-                }
-                if (isInvisible)
-                {
-                    _meshRenderer.enabled = true;
+                    if (kvp.Key.gameObject.CompareTag(Tags.OnlyShowWhenGlowing))
+                    {
+                        kvp.Key.enabled = true;
+                    }
                 }
             }
 

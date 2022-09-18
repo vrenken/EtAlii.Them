@@ -49,40 +49,40 @@ namespace Game.Players
             while (_updateCoroutine != null)
             {
                 yield return new WaitForSecondsRealtime(interval);
-                UpdateHexTile();
-                if (hexTile != null)
+
+                if (hexGrid == null || character == null) 
                 {
-                    contextMenu.Prepare(hexTile, out var canBeUsed);
-                    if (canBeUsed)
+                    yield break;
+                }
+
+                if (FindTarget(out var selectedHexTile))
+                {
+                    if (selectedHexTile != null)
                     {
-                        hexTile.EnableHighlight();
+                        if (hexTile != null && hexTile != selectedHexTile)
+                        {
+                            hexTile.DisableHighlight();
+                        }
+                        hexTile = selectedHexTile;  
+                        
+                        contextMenu.Prepare(hexTile, out var canBeUsed);
+                        if (canBeUsed)
+                        {
+                            hexTile.EnableHighlight();
+                        }
                     }
                 }
-            }
-        }
-
-        private void UpdateHexTile()
-        {
-            if (hexGrid == null || character == null) 
-            {
-                return;
-            }
-
-            if (FindTarget(out var tileGameObject))
-            {
-                var selectedHexTile = tileGameObject.GetComponent<HexTile>();
-                if (selectedHexTile != null)
+                else
                 {
-                    if (hexTile != null && hexTile != selectedHexTile)
+                    if (hexTile != null)
                     {
                         hexTile.DisableHighlight();
-
+                        hexTile = null;
                     }
-                    hexTile = selectedHexTile;  
                 }
             }
         }
-        
+
         
         private bool FindTarget(out HexTile result)
         {
@@ -91,7 +91,8 @@ namespace Game.Players
             var ray = new Ray(characterPosition, Vector3.down);
             if (Physics.Raycast(ray, out var hit, selectionMask))
             {
-                result = hit.collider.gameObject.GetComponent<HexTile>();
+                var potentialTile = hit.collider.gameObject;
+                result = potentialTile.GetComponent<HexTile>() ?? potentialTile.GetComponentInParent<HexTile>(); 
                 if (result != null)
                 {
                     // We want to also look 
@@ -102,7 +103,8 @@ namespace Game.Players
                         ray = new Ray(characterPosition + character.transform.forward * offsetMargin, Vector3.down);
                         if (Physics.Raycast(ray, out hit, selectionMask))
                         {
-                            result = hit.collider.gameObject.GetComponent<HexTile>();
+                            potentialTile = hit.collider.gameObject;
+                            result = potentialTile.GetComponent<HexTile>() ?? potentialTile.GetComponentInParent<HexTile>(); 
                             return result != null;
                         }
                     }

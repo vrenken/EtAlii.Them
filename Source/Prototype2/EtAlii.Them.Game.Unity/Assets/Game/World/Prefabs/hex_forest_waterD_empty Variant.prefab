@@ -95,6 +95,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 57cf909e8e7649b4bb4b5e33060508eb, type: 3}
+      propertyPath: m_TagString
+      value: Only show when glowing
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57cf909e8e7649b4bb4b5e33060508eb, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -165,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 77a41a5d5f6c2934b9abfcedd2e176aa, type: 3}
       propertyPath: m_TagString
-      value: No Highlighting
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 77a41a5d5f6c2934b9abfcedd2e176aa, type: 3}
       propertyPath: m_StaticEditorFlags
