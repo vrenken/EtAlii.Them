@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Build-Delete
   m_EditorClassIdentifier: 
   icon: {fileID: 7388822144124034973, guid: df6ea77accc43f04aa8409c76ff5cade, type: 3}
-  rotation: 0
+  rotation: -4
   title: Destroy
   isSelected: 0
   children: []
+  action: {fileID: 11400000, guid: 4817740118cce6e4f91d864f88c51a6b, type: 2}

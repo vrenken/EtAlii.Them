@@ -24,7 +24,6 @@ namespace Game.Players
             var coordinates = tile.HexCoordinates;
 
             grid.ReplaceTile(coordinates, groundTilePrefab);
-
         }
     }
 }
