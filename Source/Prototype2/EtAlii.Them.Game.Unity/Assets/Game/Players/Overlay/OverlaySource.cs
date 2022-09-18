@@ -7,6 +7,7 @@ namespace Game.Players
     {
         public UIDocument overlay;
 
+        //public Header Header { get; private set; }
         public VisualElement ContextMenu { get; private set; }
         public Vector2 ContextMenuSize { get; private set; }
 
