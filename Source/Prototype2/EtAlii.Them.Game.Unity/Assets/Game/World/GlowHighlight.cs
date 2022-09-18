@@ -13,15 +13,10 @@ namespace Game.World
 
         public Material glowMaterial;
 
-        public bool isInvisible;
         public bool isGlowing;
 
-        private MeshRenderer _meshRenderer;
-        
         private void Awake()
         {
-            _meshRenderer = GetComponent<MeshRenderer>();
-            
             PrepareMaterials();
             
 #if UNITY_EDITOR
