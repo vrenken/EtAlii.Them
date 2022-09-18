@@ -18,7 +18,7 @@ namespace Game.Players
         public BuildingProp singleWallPropPrefab;
         public BuildingProp endWallPropPrefab;
 
-        public override bool IsValid(HexTile tile, HexGrid grid, out int priority, out object preparations)
+        public override bool IsValid(HexGrid grid, HexTile tile, out int priority, out object preparations)
         {
             preparations = null;
             priority = 100;
@@ -45,23 +45,22 @@ namespace Game.Players
                 Destroy(existingProp.gameObject); 
             }
         }
-        public override void Invoke(HexTile tile, HexGrid grid, object preparations)
+        public override void Invoke(HexGrid grid, HexTile tile, object preparations)
         {
             ClearTile(tile);
             
             var neighbouringWalls = (HexTile[])preparations;
 
-            CreateRightWall(tile, neighbouringWalls); 
-            tile.type = TileType.Wall;
+            CreateRightWall(grid, tile, neighbouringWalls, true); 
         }
 
-        private void CreateRightWall(HexTile tile, HexTile[] neighbours)
+        private void CreateRightWall(HexGrid grid, HexTile tile, HexTile[] neighbours, bool traverse)
         {
             switch(neighbours.Length)
             {
-                case 0: Instantiate(singleWallPropPrefab, tile.props.transform); break;
-                case 1: CreateAndConnectWithOneWall(tile, neighbours.Single()); break;
-                case 2: CreateAndConnectWithTwoWalls(tile, neighbours); break;
+                case 0: CreateStandaloneWall(tile); break;
+                case 1: CreateAndConnectWithOneWall(grid, tile, neighbours[0], traverse); break;
+                case 2: CreateAndConnectWithTwoWalls(grid, tile, neighbours[0], neighbours[1], traverse); break;
                 default: throw new NotSupportedException("Invalid wall");
             }
         }
@@ -75,12 +74,38 @@ namespace Game.Players
                 .ToArray();
         }
 
-        private void CreateAndConnectWithTwoWalls(HexTile tile, HexTile[] neighbours)
+        private void CreateStandaloneWall(HexTile tile)
         {
-            Instantiate(straightWallPropPrefab, tile.props.transform);
+            Instantiate(singleWallPropPrefab, tile.props.transform);
+            tile.type = TileType.Wall;
+        }
+        private void CreateAndConnectWithTwoWalls(HexGrid grid, HexTile tile, HexTile first, HexTile second, bool traverse)
+        {
+            var firstDirection = HexMath.RelativePositionTo(tile, first);
+            var secondDirection = HexMath.RelativePositionTo(tile, second);
+
+            var (prefab, rotation) = (firstDirection, secondDirection) switch
+            {
+                (HexDirection.East, HexDirection.West) => (straightWallPropPrefab, 0),
+                (HexDirection.NorthLeft, HexDirection.SouthRight) => (straightWallPropPrefab, 60),
+                (HexDirection.NorthRight, HexDirection.SouthLeft) => (straightWallPropPrefab, 120),
+                _ => throw new NotSupportedException("Invalid wall prefab")
+            };         
+            
+            var quaternion = Quaternion.AngleAxis(rotation, Vector3.up);
+            var newTransform = tile.props.transform;
+            Instantiate(prefab, newTransform.position, quaternion, newTransform);
+
+            tile.type = TileType.Wall;
+
+            if (traverse)
+            {
+                UpdateTile(first, grid);
+                UpdateTile(second, grid);
+            }
         }
 
-        private void CreateAndConnectWithOneWall(HexTile tile, HexTile other)
+        private void CreateAndConnectWithOneWall(HexGrid hexGrid, HexTile tile, HexTile other, bool traverse)
         {
             var direction = HexMath.RelativePositionTo(tile, other);
 
@@ -89,16 +114,19 @@ namespace Game.Players
             var newTransform = tile.props.transform;
             Instantiate(endWallPropPrefab, newTransform.position, newTileQuaterion, newTransform);
 
-            ClearTile(other);
+            tile.type = TileType.Wall;
 
-            var otherTileRotation = HexMath.ToDegrees(direction, true);
-            var otherTileQuaterion = Quaternion.AngleAxis(otherTileRotation, Vector3.up);
-            var otherTransform = other.props.transform;
-            Instantiate(endWallPropPrefab, otherTransform.position, otherTileQuaterion, otherTransform);
-
-            
-
+            if (traverse)
+            {
+                UpdateTile(other, hexGrid);
+            }
         }
 
+        private void UpdateTile(HexTile tile, HexGrid grid)
+        {
+            var neighbouringWalls = FindNeighbouringWalls(tile, grid);
+            ClearTile(tile);
+            CreateRightWall(grid, tile, neighbouringWalls, false);
+        }
     }
 }

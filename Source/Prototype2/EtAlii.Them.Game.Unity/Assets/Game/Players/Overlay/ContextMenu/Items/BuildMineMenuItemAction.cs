@@ -8,7 +8,7 @@ namespace Game.Players
     {
         public BuildingProp minePropPrefab;
 
-        public override bool IsValid(HexTile tile, HexGrid grid, out int priority, out object preparations)
+        public override bool IsValid(HexGrid grid, HexTile tile, out int priority, out object preparations)
         {
             preparations = null;
             priority = 100;
@@ -19,7 +19,7 @@ namespace Game.Players
             };
         }
 
-        public override void Invoke(HexTile tile, HexGrid grid, object preparations)
+        public override void Invoke(HexGrid grid, HexTile tile, object preparations)
         {
             var existingProps = tile.props.GetComponentsInChildren<BuildingProp>();
             foreach (var existingProp in existingProps)

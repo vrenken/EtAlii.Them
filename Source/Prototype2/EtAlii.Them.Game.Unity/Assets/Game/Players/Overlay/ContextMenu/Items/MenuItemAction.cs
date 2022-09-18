@@ -5,8 +5,8 @@ namespace Game.Players
 
     public abstract class MenuItemAction : ScriptableObject
     {
-        public abstract bool IsValid(HexTile tile, HexGrid grid, out int priority, out object preparations);
-        public abstract void Invoke(HexTile tile, HexGrid grid, object preparations);
+        public abstract bool IsValid(HexGrid grid, HexTile tile, out int priority, out object preparations);
+        public abstract void Invoke(HexGrid grid, HexTile tile, object preparations);
 
     }
 }

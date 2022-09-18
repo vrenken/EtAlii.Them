@@ -46,9 +46,9 @@ namespace Game.Players
             if (action != null)
             {
                 var grid = hexTileSelector.hexGrid;
-                if (action.IsValid(tile, grid, out var _, out var preparations))
+                if (action.IsValid(grid, tile, out var _, out var preparations))
                 {
-                    action.Invoke(tile, grid, preparations);
+                    action.Invoke(grid, tile, preparations);
                 }
             }
 
