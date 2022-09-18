@@ -1,5 +1,6 @@
 namespace Game.World
 {
+    using Game.Buildings;
     using UnityEngine;
 
     [SelectionBase]
@@ -39,5 +40,14 @@ namespace Game.World
 
         public void EnableHighlight() => highlight.ToggleGlow(true);
         public void DisableHighlight() => highlight.ToggleGlow(false);
+        
+        public void Clear()
+        {
+            var existingProps = props.GetComponentsInChildren<BuildingProp>();
+            foreach (var existingProp in existingProps)
+            {
+                Destroy(existingProp.gameObject); 
+            }
+        }
     }
 }

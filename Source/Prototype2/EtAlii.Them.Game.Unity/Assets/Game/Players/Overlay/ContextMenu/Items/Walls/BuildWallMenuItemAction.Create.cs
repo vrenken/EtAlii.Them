@@ -8,7 +8,7 @@ namespace Game.Players
     {
         public override void Invoke(HexGrid grid, HexTile tile, object preparations)
         {
-            ClearTile(tile);
+            tile.Clear();
             
             var neighbouringWalls = (HexTile[])preparations;
 
@@ -101,7 +101,7 @@ namespace Game.Players
         private void UpdateTile(HexTile tile, HexGrid grid)
         {
             var neighbouringWalls = FindNeighbouringWalls(tile, grid);
-            ClearTile(tile);
+            tile.Clear();
             CreateRightWall(grid, tile, neighbouringWalls, false);
         }
     }

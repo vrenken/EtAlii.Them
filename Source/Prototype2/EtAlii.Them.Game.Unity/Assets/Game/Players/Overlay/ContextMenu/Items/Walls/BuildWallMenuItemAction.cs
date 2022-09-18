@@ -16,17 +16,7 @@ namespace Game.Players
         public BuildingProp hexCornerWallBPropPrefab;
         public BuildingProp singleWallPropPrefab;
         public BuildingProp endWallPropPrefab;
-
-
-        private void ClearTile(HexTile tile)
-        {
-            var existingProps = tile.props.GetComponentsInChildren<BuildingProp>();
-            foreach (var existingProp in existingProps)
-            {
-                Destroy(existingProp.gameObject); 
-            }
-        }
-
+        
         private HexTile[] FindNeighbouringWalls(HexTile tile, HexGrid grid)
         {
             var neighbours = grid.GetNeighbours(tile.HexCoordinates);
