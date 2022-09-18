@@ -282,18 +282,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   props: {fileID: 146347445064289915}
---- !u!114 &5986570313116315804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3958987786253071598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095138f28b1e487aafa49e9aebe4347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8633705581095004138
 MonoBehaviour:
   m_ObjectHideFlags: 0
