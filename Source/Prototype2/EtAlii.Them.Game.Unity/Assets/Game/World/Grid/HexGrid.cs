@@ -51,7 +51,11 @@ namespace Game.World
 
             var newNeighbors = new List<Vector3Int>();
 
-            foreach (var direction in Direction.GetDirectionsOffsets(coordinates.z))
+            var directions = coordinates.z % 2 == 0 
+                ? HexMath.DirectionsOffsetEven 
+                : HexMath.DirectionsOffsetOdd;
+
+            foreach (var direction in directions)
             {
                 if(_tiles.ContainsKey(coordinates + direction))
                 {
@@ -60,34 +64,6 @@ namespace Game.World
             }
 
             return _tileNeighbours[coordinates] = newNeighbors.ToArray();
-        }
-    }
-
-    public static class Direction
-    {
-        private static readonly Vector3Int[] directionsOffsetOdd = 
-        {
-            new(-1, 0, 1), // N1
-            new(0, 0, 1), // N2
-            new(1, 0, 0), // E
-            new(0, 0, -1), // S2
-            new(-1, 0, -1), // S1
-            new(-1, 0, 0), // W
-        };
-        
-        private static readonly Vector3Int[] directionsOffsetEven = 
-        {
-            new(0, 0, 1), // N1
-            new(1, 0, 1), // N2
-            new(1, 0, 0), // E
-            new(1, 0, -1), // S2
-            new(0, 0, -1), // S1
-            new(-1, 0, 0), // W
-        };
-
-        public static Vector3Int[] GetDirectionsOffsets(int z)
-        {
-            return z % 2 == 0 ? directionsOffsetEven : directionsOffsetOdd;
         }
     }
 }
