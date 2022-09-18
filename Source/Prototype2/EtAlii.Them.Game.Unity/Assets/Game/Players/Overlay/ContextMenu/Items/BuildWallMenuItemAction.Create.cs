@@ -1,8 +1,6 @@
 namespace Game.Players
 {
     using System;
-    using System.Linq;
-    using Game.Buildings;
     using Game.World;
     using UnityEngine;
 
