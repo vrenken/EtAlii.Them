@@ -40,7 +40,20 @@ namespace Game.Players
             var grid = hexTileSelector.hexGrid;
 
             _activeItems = items
-                .Where(i => i.action != null && i.action.IsValid(grid, tile, out var _, out var _))
+                .Select(i =>
+                {
+                    var isValid = false;
+                    var priority = -1;
+                    if (i.action != null)
+                    {
+                        isValid = i.action.IsValid(grid, tile, out priority, out var _);
+                    }
+
+                    return (IsValid: isValid, Priority: priority, Item: i);
+                })
+                .Where(t => t.IsValid)
+                .OrderByDescending(t => t.Priority)
+                .Select(t => t.Item)
                 .ToArray();
             
             canBeUsed = _activeItems.Any();
